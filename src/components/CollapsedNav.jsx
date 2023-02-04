@@ -1,13 +1,17 @@
+import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 const CollapsedNav = () => {
     return (
         <>
             <nav className="collapsed">
                 <ul>
-                    <li className="dropdown-button" id="hamburger">Menu <span
-                        className="dropdown-arrow">&#10094</span></li>
+                    <li className="dropdown-button" id="hamburger">
+                        Menu <FontAwesomeIcon icon={faCircleChevronDown} className="icon dropdown-arrow" />
+                    </li>
                 </ul>
             </nav>
-            <div id="dropdown-menu" className="hidden">
+            <div id="dropdown-menu" className="no-display">
                 <ul>
                     <li><a className="dropdown-selected" href="index.html">Home</a></li>
                     <li><a href="">Sports Massage</a></li>

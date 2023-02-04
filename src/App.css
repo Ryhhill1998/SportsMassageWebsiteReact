@@ -21,18 +21,23 @@ body {
 header {
     background-color: #d7f0f8;
     border-bottom: solid 5px #5fc3e5;
-    /*position: sticky;*/
-    /*top: 0;*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header.shrink .logo-container {
+    display: none;
 }
 
 header .container {
-    padding-top: 1em;
     margin: 0 auto;
     text-align: right;
 }
 
 /* COLLAPSE NAV */
-.collapsable-nav {
+.collapse-nav {
     position: relative;
 }
 
@@ -108,7 +113,7 @@ nav > ul > li {
 }
 
 /* DROPDOWN */
-.collapsable-nav > div:last-child {
+.collapse-nav > div:last-child {
     background-color: #d7f0f8;
     border: solid 2px #5fc3e5;
     border-top: solid 5px #5fc3e5;
@@ -118,17 +123,17 @@ nav > ul > li {
     overflow: hidden;
 }
 
-.collapsable-nav > div:last-child ul {
+.collapse-nav > div:last-child ul {
     margin: 0;
 }
 
-.collapsable-nav > div:last-child a {
+.collapse-nav > div:last-child a {
     display: inline-block;
     width: 100%;
     padding: 0.75em 0;
 }
 
-.collapsable-nav > div:last-child a:hover {
+.collapse-nav > div:last-child a:hover {
     background-color: #5fc3e5;
     color: white;
     cursor: pointer;
@@ -140,11 +145,20 @@ nav > ul > li {
     cursor: default;
 }
 
+.collapsed {
+    display: none;
+}
+
+.collapsed ul {
+    padding-bottom: 0.5em;
+}
+
 .logo {
     max-width: 350px;
 }
 
 .logo-container {
+    margin-top: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -158,13 +172,9 @@ nav > ul > li {
     margin-bottom: 0.75em;
 }
 
-.collapsed {
-    display: none;
-}
-
 /* MAIN */
 main {
-    margin: 0 auto 5em;
+    margin: 280px auto 5em;
     min-height: 450px;
 }
 
@@ -458,11 +468,11 @@ footer a:hover {
     box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     background-color: #d7f0f8;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 20%;
-    z-index: 20;
+    z-index: 30;
     width: 90%;
     max-width: 450px;
     height: 520px;
@@ -552,8 +562,9 @@ form .submit-button:hover {
     position: fixed;
     height: 100%;
     width: 100%;
+    top: 0;
     background-color: rgba(0,0,0,0.6);
-    z-index: 2;
+    z-index: 20;
     display: none;
 }
 
@@ -631,6 +642,10 @@ img {
 
 figure img:hover {
     transform: scale(1.1);
+}
+
+.no-display {
+    display: none;
 }
 
 .hidden {

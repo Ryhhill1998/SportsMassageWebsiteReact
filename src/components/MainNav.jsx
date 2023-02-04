@@ -11,7 +11,7 @@ const MainNav = () => {
                         Services
                         <FontAwesomeIcon icon={faCircleChevronDown} className="icon dropdown-arrow" />
                     </a>
-                    <div id="services-dropdown" className="hidden">
+                    <div id="services-dropdown" className="no-display">
                         <ul>
                             <li><a href="">Sports Massage</a></li>
                             <li><a href="">Reflexology</a></li>

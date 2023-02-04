@@ -71,13 +71,10 @@ const App = () => {
                             <h2>About Us</h2>
 
                             <p>
-                                Whether you’re looking for support recovering from an injury, some respite from a niggling
-                                pain or
-                                simply
-                                want to unwind and de-stress, R&R Sports Massage & Reflexology offers a range of treatments
-                                that can
-                                help
-                                including Sports Massage, Reflexology, Swedish Massage and LA Stone Therapy.
+                                Whether you’re looking for support recovering from an injury, some respite from a
+                                niggling pain or simply want to unwind and de-stress, R&R Sports Massage & Reflexology
+                                offers a range of treatments that can help including Sports Massage, Reflexology,
+                                Swedish Massage and LA Stone Therapy.
                             </p>
 
                             <p>
@@ -85,8 +82,8 @@ const App = () => {
                             </p>
 
                             <p>
-                                Those looking for support recovering from a soft tissue injury such as a sprain or pulled
-                                muscle...
+                                Those looking for support recovering from a soft tissue injury such as a sprain or
+                                pulled muscle...
                             </p>
 
                             <p className="read-more">
@@ -98,7 +95,7 @@ const App = () => {
                     </div>
                 </section>
 
-                <hr className="section-separator" />
+                <hr className="section-separator"/>
 
                 <section id="section--links">
                     <h2>Our Services</h2>
@@ -107,7 +104,7 @@ const App = () => {
                         {cards.map((card, i) => {
                             const {imageSrc, heading, content} = card;
                             return (
-                                <Card key={i} imageSrc={imageSrc} heading={heading} content={content} />
+                                <Card key={i} imageSrc={imageSrc} heading={heading} content={content}/>
                             )
                         })}
                     </div>
