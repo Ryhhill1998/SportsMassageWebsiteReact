@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const AboutCard = ({heading, content, imageSrc}) => {
+const AboutSection = ({heading, content, imageSrc}) => {
     let count = 0;
 
     const mapFunction = (entry) => {
@@ -25,22 +25,24 @@ const AboutCard = ({heading, content, imageSrc}) => {
     }
 
     return (
-        <div className="about">
-            <div className="content">
-                <h2>{heading}</h2>
+        <section id="section--intro">
+            <div className="about">
+                <div className="content">
+                    <h2>{heading}</h2>
 
-                <div className="description">
-                    {content.map(entry => mapFunction(entry))}
+                    <div className="description">
+                        {content.map(entry => mapFunction(entry))}
+                    </div>
+
+                    <p className="read-more">
+                        Read more
+                    </p>
                 </div>
 
-                <p className="read-more">
-                    Read more
-                </p>
+                <div className="intro-image" style={{backgroundImage: `url(${imageSrc})`}}></div>
             </div>
-
-            <div className="intro-image" style={{backgroundImage: `url(${imageSrc})`}}></div>
-        </div>
+        </section>
     );
 };
 
-export default AboutCard;
+export default AboutSection;
