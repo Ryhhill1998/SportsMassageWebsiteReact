@@ -1,4 +1,6 @@
 import logo from "../images/logo-with-text.png";
+import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
     return (
@@ -8,8 +10,8 @@ const Navbar = () => {
                 <div className="logo-container">
                     <img className="logo" src={logo} alt="logo"/>
                     <ul className="contact-info">
-                        <li><i className="fas fa-phone-alt"></i> 07446 258 822</li>
-                        <li><i className="fas fa-envelope"></i> rrsportsmassage@outlook.com</li>
+                        <li>07446 258 822</li>
+                        <li>rrsportsmassage@outlook.com</li>
                         <li className="search-container">
                             <div className="search-box">
                                 <input id="search-field" type="search" placeholder="Search..."/>
@@ -27,7 +29,7 @@ const Navbar = () => {
                             <li className="services">
                                 <a className="dropdown-button" id="services-button">
                                     Services
-                                    <span className="dropdown-arrow"></span>
+                                    <FontAwesomeIcon icon={faCircleChevronDown} className="dropdown-arrow" />
                                 </a>
                                 <div id="services-dropdown" className="hidden">
                                     <ul>

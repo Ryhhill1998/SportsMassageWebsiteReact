@@ -81,7 +81,7 @@ nav > ul > li {
 .dropdown-arrow {
     display: inline-block;
     margin-left: 0.5em;
-    transform: rotate(-90deg);
+    color: #0189ab;
 }
 
 #services-dropdown {
