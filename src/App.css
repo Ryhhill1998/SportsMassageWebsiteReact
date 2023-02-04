@@ -32,7 +32,7 @@ header .container {
 }
 
 /* COLLAPSE NAV */
-.collapse-nav {
+.collapsable-nav {
     position: relative;
 }
 
@@ -109,7 +109,7 @@ nav > ul > li {
 }
 
 /* DROPDOWN */
-.collapse-nav > div:last-child {
+.collapsable-nav > div:last-child {
     background-color: #d7f0f8;
     border: solid 2px #5fc3e5;
     border-top: solid 5px #5fc3e5;
@@ -119,17 +119,17 @@ nav > ul > li {
     overflow: hidden;
 }
 
-.collapse-nav > div:last-child ul {
+.collapsable-nav > div:last-child ul {
     margin: 0;
 }
 
-.collapse-nav > div:last-child a {
+.collapsable-nav > div:last-child a {
     display: inline-block;
     width: 100%;
     padding: 0.75em 0;
 }
 
-.collapse-nav > div:last-child a:hover {
+.collapsable-nav > div:last-child a:hover {
     background-color: #5fc3e5;
     color: white;
     cursor: pointer;

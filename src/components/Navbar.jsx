@@ -1,6 +1,9 @@
 import logo from "../images/logo-with-text.png";
-import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
+
+import MainNav from "./MainNav";
+import CollapsedNav from "./CollapsedNav";
 
 const Navbar = () => {
     return (
@@ -22,54 +25,9 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="collapse-nav">
-                    <nav className="main-nav">
-                        <ul>
-                            <li><a href="#top">Home</a></li>
-                            <li className="services">
-                                <a className="dropdown-button" id="services-button">
-                                    Services
-                                    <FontAwesomeIcon icon={faCircleChevronDown} className="dropdown-arrow" />
-                                </a>
-                                <div id="services-dropdown" className="hidden">
-                                    <ul>
-                                        <li><a href="">Sports Massage</a></li>
-                                        <li><a href="">Reflexology</a></li>
-                                        <li><a href="">Swedish Massage</a></li>
-                                        <li><a href="">Indian Head Massage</a></li>
-                                        <li><a href="">LA Stone Therapy</a></li>
-                                        <li><a href="">Corporate Pamper Days</a></li>
-                                        <li><a href="">Peer-to-Peer Massage</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="">FAQs</a></li>
-                            <li><a href="#section--testimonials">Testimonials</a></li>
-                            <li><a href="#top" className="contact-button">Contact</a></li>
-                        </ul>
-                    </nav>
-
-                    <nav className="collapsed">
-                        <ul>
-                            <li className="dropdown-button" id="hamburger">Menu <span
-                                className="dropdown-arrow">&#10094</span></li>
-                        </ul>
-                    </nav>
-                    <div id="dropdown-menu" className="hidden">
-                        <ul>
-                            <li><a className="dropdown-selected" href="index.html">Home</a></li>
-                            <li><a href="">Sports Massage</a></li>
-                            <li><a href="">Reflexology</a></li>
-                            <li><a href="">Swedish Massage</a></li>
-                            <li><a href="">Indian Head Massage</a></li>
-                            <li><a href="">LA Stone Therapy</a></li>
-                            <li><a href="">Corporate Pamper Days</a></li>
-                            <li><a href="">Peer-to-Peer Massage</a></li>
-                            <li><a href="">FAQs</a></li>
-                            <li><a href="#section--testimonials">Testimonials</a></li>
-                            <li><a href="#top" className="contact-button">Contact</a></li>
-                        </ul>
-                    </div>
+                <div className="collapsable-nav">
+                    <MainNav/>
+                    <CollapsedNav/>
                 </div>
             </div>
         </header>
