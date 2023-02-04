@@ -81,7 +81,6 @@ nav > ul > li {
 .dropdown-arrow {
     display: inline-block;
     margin-left: 0.5em;
-    color: #0189ab;
 }
 
 #services-dropdown {
@@ -559,7 +558,7 @@ form .submit-button:hover {
 }
 
 /* FONT AWESOME ICONS */
-.fas {
+.icon {
     color: #0189ab;
 }
 

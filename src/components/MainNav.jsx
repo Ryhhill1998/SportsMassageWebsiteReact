@@ -9,7 +9,7 @@ const MainNav = () => {
                 <li className="services">
                     <a className="dropdown-button" id="services-button">
                         Services
-                        <FontAwesomeIcon icon={faCircleChevronDown} className="dropdown-arrow" />
+                        <FontAwesomeIcon icon={faCircleChevronDown} className="icon dropdown-arrow" />
                     </a>
                     <div id="services-dropdown" className="hidden">
                         <ul>
