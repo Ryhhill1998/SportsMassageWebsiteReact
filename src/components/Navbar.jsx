@@ -1,6 +1,5 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 import MainNav from "./MainNav";
 import CollapsedNav from "./CollapsedNav";
@@ -23,7 +22,9 @@ const Navbar = () => {
                         <li className="search-container">
                             <div className="search-box">
                                 <input id="search-field" type="search" placeholder="Search..."/>
-                                <button id="search-button">Go</button>
+                                <button id="search-button">
+                                    <FontAwesomeIcon icon={faMagnifyingGlass} className="icon" />
+                                </button>
                             </div>
                             <ul id="search-results-container" className="search-results-dropdown"></ul>
                         </li>

@@ -438,12 +438,15 @@ footer a:hover {
 .search-box button {
     border: solid 2px #06b0dd;
     background-color: #06b0dd;
-    color: white;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     font-size: 1rem;
-    padding: 0.25em;
+    padding: 0.25em 0.35em;
     margin-left: 0;
+}
+
+.search-box .icon {
+    color: white;
 }
 
 /* SEARCH RESULTS */
