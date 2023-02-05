@@ -1,5 +1,3 @@
-import {useState} from "react";
-
 const AboutSection = ({heading, content, imageSrc}) => {
     let count = 0;
 

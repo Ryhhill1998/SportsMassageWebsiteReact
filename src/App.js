@@ -12,6 +12,7 @@ import indianHeadMassageImageSrc from "./images/indianHeadMassage.jpeg";
 import stoneTherapyImageSrc from "./images/stoneTherapy.jpeg";
 import pamperDaysImageSrc from "./images/pamperDays.jpeg";
 import TestimonialsSection from "./components/TestimonialsSection";
+import Footer from "./components/Footer";
 
 const aboutCardInfo = {
     heading: "About Us",
@@ -54,6 +55,8 @@ const App = () => {
                 <TestimonialsSection/>
 
             </main>
+
+            <Footer/>
         </div>
     );
 }

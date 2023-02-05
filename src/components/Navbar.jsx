@@ -1,10 +1,10 @@
-import logo from "../images/logo-with-text.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import MainNav from "./MainNav";
 import CollapsedNav from "./CollapsedNav";
+import Logo from "./Logo";
 
 const Navbar = () => {
     return (
@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className="container">
 
                 <div className="logo-container">
-                    <img className="logo" src={logo} alt="logo"/>
+                    <Logo/>
                     <ul className="contact-info">
                         <li>
                             <FontAwesomeIcon icon={faPhone} className="icon" /> 07446 258 822
