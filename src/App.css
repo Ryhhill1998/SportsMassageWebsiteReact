@@ -292,17 +292,21 @@ section {
     grid-column-start: 1;
     grid-row-start: 1;
     width: 75%;
-    margin: 0 auto;
+    margin: 4em auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4em;
+    background-color: #d7f0f8;
+    border-radius: 8px;
+    padding: 1em;
+    position: relative;
 }
 
 .carousel figure p {
     text-align: center;
     font-size: 1.2rem;
     line-height: 2em;
+    margin-top: 3em;
 }
 
 .quotation-mark {
@@ -321,6 +325,8 @@ section {
     background-color: #5fc3e5;
     border-radius: 50%;
     overflow: hidden;
+    position: absolute;
+    top: -60px;
 }
 
 .avatar {

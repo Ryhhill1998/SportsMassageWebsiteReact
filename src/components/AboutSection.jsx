@@ -3,7 +3,7 @@ import {useState} from "react";
 const AboutSection = ({heading, content, imageSrc}) => {
     let count = 0;
 
-    const mapFunction = (entry) => {
+    const mapFunction = (entry, i) => {
         const words = entry.split(" ");
         let reducedEntry = "";
 
@@ -21,7 +21,7 @@ const AboutSection = ({heading, content, imageSrc}) => {
             }
         }
 
-        return <p>{reducedEntry}</p>
+        return <p key={i}>{reducedEntry}</p>
     }
 
     return (
@@ -31,7 +31,7 @@ const AboutSection = ({heading, content, imageSrc}) => {
                     <h2>{heading}</h2>
 
                     <div className="description">
-                        {content.map(entry => mapFunction(entry))}
+                        {content.map((entry, i) => mapFunction(entry, i))}
                     </div>
 
                     <p className="read-more">
