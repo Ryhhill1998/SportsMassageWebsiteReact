@@ -233,7 +233,7 @@ section {
 }
 
 .cards-container figure > div {
-    height: 55%;
+    height: 50%;
     overflow: hidden;
 }
 
@@ -246,11 +246,7 @@ section {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 1.5em;
-    height: 45%;
-    /*white-space: nowrap;*/
-    /*overflow: hidden;*/
-    /*text-overflow: ellipsis;*/
-    /*max-width: 200px;*/
+    height: 50%;
 }
 
 .read-more {
@@ -310,10 +306,10 @@ section {
 }
 
 .quotation-mark {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: #0189ab;
     font-family: 'Pacifico', cursive;
-    margin: 0.1em;
+    margin: 0.25em;
 }
 
 #section--testimonials figure figcaption {
@@ -402,7 +398,7 @@ footer a:hover {
 }
 
 .about .content {
-    padding: 0.5em 2em;
+    padding: 2em;
 }
 
 .about > div {
@@ -670,6 +666,10 @@ img {
 
 /* --------------- MEDIA QUERIES --------------- */
 @media (max-width: 750px) {
+    main {
+        margin-top: 320px;
+    }
+
     header .container {
         width: 100%;
         margin: 0;
