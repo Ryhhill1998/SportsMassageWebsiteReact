@@ -1,6 +1,5 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faChevronRight, faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
-import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
+import {faCircleChevronRight, faCircleChevronLeft} from "@fortawesome/free-solid-svg-icons";
 
 import icon1 from "../images/icon1.png";
 import icon2 from "../images/icon2.png";
@@ -12,7 +11,7 @@ const TestimonialsSection = () => {
             <h2>Testimonials</h2>
 
             <div className="carousel">
-                <FontAwesomeIcon icon={faChevronLeft} className="icon arrow arrow--left" />
+                <FontAwesomeIcon icon={faCircleChevronLeft} className="icon arrow arrow--left" />
 
                 <div>
                     <figure className="testimonial">
@@ -60,7 +59,7 @@ const TestimonialsSection = () => {
                     </figure>
                 </div>
 
-                <FontAwesomeIcon icon={faChevronRight} className="icon arrow arrow--right" />
+                <FontAwesomeIcon icon={faCircleChevronRight} className="icon arrow arrow--right" />
             </div>
         </section>
     );
