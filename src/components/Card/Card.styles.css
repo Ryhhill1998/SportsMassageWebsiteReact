@@ -28,14 +28,3 @@
     padding: 1.5em;
     height: 50%;
 }
-
-.read-more {
-    color: #0189ab;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.read-more:hover {
-    color: #06b0dd;
-    cursor: pointer;
-}

@@ -3,7 +3,7 @@ import { faEnvelope, faPhone, faMagnifyingGlass } from '@fortawesome/free-solid-
 
 import MainNav from "./MainNav/MainNav.component";
 import CollapsedNav from "./CollapsedNav/CollapsedNav.component";
-import Logo from "../../Logo/Logo.component";
+import Logo from "../Logo/Logo.component";
 
 import "./Navbar.styles.css";
 

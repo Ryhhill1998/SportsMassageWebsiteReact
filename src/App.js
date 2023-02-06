@@ -6,7 +6,7 @@ import ServicesSection from "./components/ServicesSection/ServicesSection.compon
 
 import massageImageSrc from "./images/massage.jpeg";
 import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSection.component";
-import Footer from "./Footer/Footer.component";
+import Footer from "./components/Footer/Footer.component";
 
 const aboutCardInfo = {
     heading: "About Us",

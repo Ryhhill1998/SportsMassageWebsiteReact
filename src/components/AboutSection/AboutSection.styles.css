@@ -13,17 +13,6 @@
     margin-bottom: 1em;
 }
 
-.read-more {
-    color: #0189ab;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.read-more:hover {
-    color: #06b0dd;
-    cursor: pointer;
-}
-
 #section--intro .about {
     margin: 0;
 }
@@ -36,7 +25,7 @@
 }
 
 .about .content {
-    padding: 2em 2em 0;
+    padding: 2em;
 }
 
 .about > div {

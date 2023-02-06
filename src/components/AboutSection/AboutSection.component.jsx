@@ -1,5 +1,7 @@
 import "./AboutSection.styles.css";
 
+import ReadMore from "../ReadMore/ReadMore.component";
+
 const AboutSection = ({heading, content, imageSrc}) => {
     let count = 0;
 
@@ -34,9 +36,7 @@ const AboutSection = ({heading, content, imageSrc}) => {
                         {content.map((entry, i) => mapFunction(entry, i))}
                     </div>
 
-                    <p className="read-more">
-                        Read more
-                    </p>
+                    <ReadMore/>
                 </div>
 
                 <div className="intro-image" style={{backgroundImage: `url(${imageSrc})`}}></div>
