@@ -6,9 +6,7 @@ import "./Slide.styles.css";
 const Slide = ({iconImageSrc, review, author, i}) => {
     return (
         <figure className={`slide ${i < 2 ? "hidden" : ""}`}>
-            <div className="avatar-background">
-                <img className="avatar" src={iconImageSrc} alt="avatar"/>
-            </div>
+            <img className="avatar" src={iconImageSrc} alt="avatar"/>
 
             <p>
                 <FontAwesomeIcon icon={faQuoteLeft} className="icon quotation-mark" />

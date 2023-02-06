@@ -32,16 +32,15 @@
     text-transform: uppercase;
 }
 
-.avatar-background {
+.avatar {
     background-color: #5fc3e5;
     border-radius: 50%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: absolute;
     top: -60px;
-}
-
-.avatar {
-    width: 125px;
+    width: 120px;
+    height: 120px;
+    padding-top: 0.5em;
 }
 
 /* --------------- MEDIA QUERIES --------------- */
