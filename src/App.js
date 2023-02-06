@@ -5,8 +5,8 @@ import AboutSection from "./components/AboutSection/AboutSection.component";
 import ServicesSection from "./components/ServicesSection/ServicesSection.component";
 
 import massageImageSrc from "./images/massage.jpeg";
-import TestimonialsSection from "./components/TestimonialsSection";
-import Footer from "./components/Footer";
+import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSection.component";
+import Footer from "./Footer/Footer.component";
 
 const aboutCardInfo = {
     heading: "About Us",
@@ -47,7 +47,6 @@ const App = () => {
                 <hr className="section-separator"/>
 
                 <TestimonialsSection/>
-
             </main>
 
             <Footer/>

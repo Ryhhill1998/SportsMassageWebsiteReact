@@ -1,0 +1,29 @@
+.carousel {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 4rem;
+    color: #0189ab;
+}
+
+.arrow:hover {
+    color: #5fc3e5;
+    cursor: pointer;
+}
+
+.carousel div {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    max-height: fit-content;
+}
+
+/* --------------- MEDIA QUERIES --------------- */
+@media (max-width: 750px) {
+    .carousel div {
+        display: block;
+    }
+}
