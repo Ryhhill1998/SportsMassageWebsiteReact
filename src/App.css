@@ -23,14 +23,6 @@ main {
     min-height: 450px;
 }
 
-.section-separator {
-    margin: 4em auto;
-    border-width: 0 0 12px 0;
-    border-color: rgba(6, 176, 221, 0.4);
-    border-bottom-style: dotted;
-    width: 60%;
-}
-
 main section:first-child h2 {
     text-align: left;
     margin-bottom: 1em;

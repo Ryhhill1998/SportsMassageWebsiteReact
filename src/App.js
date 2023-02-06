@@ -5,6 +5,7 @@ import About from "./components/AboutSection/About.component";
 import Services from "./components/ServicesSection/Services.component";
 import Footer from "./components/Footer/Footer.component";
 import Carousel from "./components/Carousel/Carousel.component";
+import DottedSeparator from "./components/DottedSeparator/DottedSeparator.component";
 
 import massageImageSrc from "./images/massage.jpeg";
 
@@ -32,7 +33,7 @@ const App = () => {
     const {heading, content, imageSrc} = aboutCardInfo;
 
     return (
-        <div className="App">
+        <>
             <Navbar/>
 
             <main className="container">
@@ -42,14 +43,14 @@ const App = () => {
                     <About heading={heading} content={content} imageSrc={imageSrc} />
                 </section>
 
-                <hr className="section-separator"/>
+                <DottedSeparator/>
 
                 <section id="section--services">
                     <h2>Our Services</h2>
                     <Services/>
                 </section>
 
-                <hr className="section-separator"/>
+                <DottedSeparator/>
 
                 <section id="section--testimonials">
                     <h2>Testimonials</h2>
@@ -58,7 +59,7 @@ const App = () => {
             </main>
 
             <Footer/>
-        </div>
+        </>
     );
 }
 
