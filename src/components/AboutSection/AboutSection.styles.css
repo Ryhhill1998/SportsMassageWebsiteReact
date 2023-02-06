@@ -1,0 +1,58 @@
+#section--intro {
+    margin-top: 3em;
+}
+
+#section--intro h2 {
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.read-more {
+    color: #0189ab;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.read-more:hover {
+    color: #06b0dd;
+    cursor: pointer;
+}
+
+#section--intro .about {
+    margin: 0;
+}
+
+.about {
+    text-align: left;
+    display: flex;
+    background-color: rgba(215, 240, 248, 0.7);
+    margin-top: 6em;
+}
+
+.about .content {
+    padding: 2em 2em 0;
+}
+
+.about > div {
+    width: 50%;
+}
+
+.intro-image {
+    background-size: cover;
+    background-position: center;
+}
+
+/* --------------- MEDIA QUERIES --------------- */
+@media (max-width: 750px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about > div {
+        width: 100%;
+    }
+
+    .intro-image {
+        min-height: 350px;
+    }
+}

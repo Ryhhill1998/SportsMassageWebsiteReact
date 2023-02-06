@@ -7,3 +7,10 @@
     width: fit-content;
     margin: 0 auto;
 }
+
+/* --------------- MEDIA QUERIES --------------- */
+@media (max-width: 750px) {
+    .collapsed {
+        display: block;
+    }
+}

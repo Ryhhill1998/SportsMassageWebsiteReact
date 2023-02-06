@@ -69,3 +69,24 @@ nav > ul > li {
     background-color: #61c9e5;
     color: white;
 }
+
+/* --------------- MEDIA QUERIES --------------- */
+@media (max-width: 750px) {
+    header .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .contact-info > li:first-child, .contact-info > li:nth-child(2) {
+        display: none;
+    }
+
+    .main-nav {
+        display: none;
+    }
+}

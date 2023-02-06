@@ -1,7 +1,7 @@
 import './App.css';
 
 import Navbar from "./components/Navbar/Navbar.component";
-import AboutSection from "./components/AboutSection";
+import AboutSection from "./components/AboutSection/AboutSection.component";
 import ServicesSection from "./components/ServicesSection";
 
 import massageImageSrc from "./images/massage.jpeg";

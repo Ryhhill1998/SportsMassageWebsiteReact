@@ -1,3 +1,5 @@
+import "./AboutSection.styles.css";
+
 const AboutSection = ({heading, content, imageSrc}) => {
     let count = 0;
 
