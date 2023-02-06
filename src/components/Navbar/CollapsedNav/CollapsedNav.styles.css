@@ -1,0 +1,9 @@
+.collapsed {
+    display: none;
+    padding-bottom: 0.75em;
+}
+
+.collapsed .dropdown-button {
+    width: fit-content;
+    margin: 0 auto;
+}

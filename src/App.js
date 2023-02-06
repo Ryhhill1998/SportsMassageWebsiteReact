@@ -1,16 +1,10 @@
 import './App.css';
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar.component";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 
 import massageImageSrc from "./images/massage.jpeg";
-import sportsMassageImageSrc from "./images/sportsMassage.jpeg";
-import reflexologyImageSrc from "./images/reflexology.jpeg";
-import swedishImageSrc from "./images/swedishMassage.jpeg";
-import indianHeadMassageImageSrc from "./images/indianHeadMassage.jpeg";
-import stoneTherapyImageSrc from "./images/stoneTherapy.jpeg";
-import pamperDaysImageSrc from "./images/pamperDays.jpeg";
 import TestimonialsSection from "./components/TestimonialsSection";
 import Footer from "./components/Footer";
 

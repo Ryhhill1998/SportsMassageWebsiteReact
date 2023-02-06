@@ -1,9 +1,11 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-import MainNav from "./MainNav";
-import CollapsedNav from "./CollapsedNav";
-import Logo from "./Logo";
+import MainNav from "./MainNav/MainNav.component";
+import CollapsedNav from "./CollapsedNav/CollapsedNav.component";
+import Logo from "../Logo";
+
+import "./Navbar.styles.css";
 
 const Navbar = () => {
     return (
@@ -31,7 +33,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="collapsable-nav">
+                <div className="collapse-nav">
                     <MainNav/>
                     <CollapsedNav/>
                 </div>
