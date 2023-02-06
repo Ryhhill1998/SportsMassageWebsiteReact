@@ -4,7 +4,7 @@ import ReadMore from "../ReadMore/ReadMore.component";
 
 const CardComponent = ({imageSrc, heading, content}) => {
     return (
-        <figure>
+        <figure className="card">
             <div>
                 <img src={imageSrc} alt={heading}/>
             </div>

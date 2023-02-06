@@ -2,6 +2,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 import "./MainNav.styles.css";
+
 const MainNav = () => {
     return (
         <nav className="main-nav">
@@ -10,7 +11,7 @@ const MainNav = () => {
                 <li className="services">
                     <a className="dropdown-button" id="services-button">
                         Services
-                        <FontAwesomeIcon icon={faCircleChevronDown} className="icon dropdown-arrow" />
+                        <FontAwesomeIcon icon={faCircleChevronDown} className="icon dropdown-arrow"/>
                     </a>
                     <div id="services-dropdown" className="no-display">
                         <ul>

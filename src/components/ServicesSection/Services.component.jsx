@@ -7,6 +7,8 @@ import stoneTherapyImageSrc from "../../images/stoneTherapy.jpeg";
 import pamperDaysImageSrc from "../../images/pamperDays.jpeg";
 import massageImageSrc from "../../images/massage.jpeg";
 
+import "./Services.styles.css";
+
 const cards = [
     {
         imageSrc: sportsMassageImageSrc,

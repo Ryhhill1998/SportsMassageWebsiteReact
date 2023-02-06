@@ -1,27 +1,20 @@
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-    margin: 0;
-}
-
-.cards-container figure {
+.card {
     height: 500px;
     min-width: 300px;
     margin: 0;
+    border-radius: 8px;
 }
 
-.cards-container figure > div {
+.card > div {
     height: 50%;
     overflow: hidden;
 }
 
-.cards-container figure img {
+.card img {
     object-fit: cover;
 }
 
-.cards-container figcaption {
+.card figcaption {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

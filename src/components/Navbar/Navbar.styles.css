@@ -39,12 +39,6 @@ header .container {
 }
 
 /* COLLAPSE NAV */
-nav > ul > li {
-    text-align: center;
-    width: 100%;
-    padding: 0.5em 0.75em;
-}
-
 .collapsible-nav {
     position: relative;
 }

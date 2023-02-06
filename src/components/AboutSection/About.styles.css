@@ -11,6 +11,8 @@
     text-align: left;
     display: flex;
     background-color: rgba(215, 240, 248, 0.7);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .about .content {
