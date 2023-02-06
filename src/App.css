@@ -40,6 +40,19 @@ section {
     margin: 6em 0;
 }
 
+#section--about {
+    margin-top: 4em;
+}
+
+#section--services figure {
+    padding-bottom: 0.25em;
+    overflow: hidden;
+    background-color: rgba(211, 211, 211, 0.8);
+    width: 40%;
+    max-width: 500px;
+    box-shadow: 0.5em 0.5em 1em rgba(128, 128, 128, 1);
+}
+
 /* CONTACT FORM */
 .contact-form {
     display: none;
@@ -170,6 +183,12 @@ h2 {
     margin-bottom: 1.5em;
 }
 
+.intro-heading {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 4rem;
+}
+
 /* --------------- GENERAL --------------- */
 
 .container {
@@ -223,5 +242,11 @@ img {
 @media (max-width: 750px) {
     main {
         margin-top: 320px;
+    }
+
+    #section--services figure {
+        float: none;
+        width: 100%;
+        margin: 0 auto 2em;
     }
 }

@@ -1,19 +1,9 @@
-#section--intro {
-    margin-top: 3em;
-}
-
-.intro-heading {
-    font-family: 'Pacifico', cursive;
-    text-align: center;
-    font-size: 4rem;
-}
-
-#section--intro h2 {
+.about h2 {
     text-align: left;
     margin-bottom: 1em;
 }
 
-#section--intro .about {
+.about {
     margin: 0;
 }
 
@@ -21,7 +11,6 @@
     text-align: left;
     display: flex;
     background-color: rgba(215, 240, 248, 0.7);
-    margin-top: 6em;
 }
 
 .about .content {

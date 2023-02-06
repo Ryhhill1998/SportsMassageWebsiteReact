@@ -1,12 +1,12 @@
 import './App.css';
 
 import Navbar from "./components/Navbar/Navbar.component";
-import AboutSection from "./components/AboutSection/AboutSection.component";
-import ServicesSection from "./components/ServicesSection/ServicesSection.component";
+import About from "./components/AboutSection/About.component";
+import Services from "./components/ServicesSection/Services.component";
+import Footer from "./components/Footer/Footer.component";
+import Carousel from "./components/Carousel/Carousel.component";
 
 import massageImageSrc from "./images/massage.jpeg";
-import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSection.component";
-import Footer from "./components/Footer/Footer.component";
 
 const aboutCardInfo = {
     heading: "About Us",
@@ -38,15 +38,23 @@ const App = () => {
             <main className="container">
                 <h1 className="intro-heading">Welcome!</h1>
 
-                <AboutSection heading={heading} content={content} imageSrc={imageSrc} />
+                <section id="section--about">
+                    <About heading={heading} content={content} imageSrc={imageSrc} />
+                </section>
 
                 <hr className="section-separator"/>
 
-                <ServicesSection/>
+                <section id="section--services">
+                    <h2>Our Services</h2>
+                    <Services/>
+                </section>
 
                 <hr className="section-separator"/>
 
-                <TestimonialsSection/>
+                <section id="section--testimonials">
+                    <h2>Testimonials</h2>
+                    <Carousel/>
+                </section>
             </main>
 
             <Footer/>

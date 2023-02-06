@@ -4,6 +4,7 @@ import { faEnvelope, faPhone, faMagnifyingGlass } from '@fortawesome/free-solid-
 import MainNav from "./MainNav/MainNav.component";
 import CollapsedNav from "./CollapsedNav/CollapsedNav.component";
 import Logo from "../Logo/Logo.component";
+import SearchBox from "../SearchBox/SearchBox.component";
 
 import "./Navbar.styles.css";
 
@@ -21,19 +22,12 @@ const Navbar = () => {
                         <li>
                             <FontAwesomeIcon icon={faEnvelope} className="icon" /> rrsportsmassage@outlook.com
                         </li>
-                        <li className="search-container">
-                            <div className="search-box">
-                                <input id="search-field" type="search" placeholder="Search..."/>
-                                <button id="search-button">
-                                    <FontAwesomeIcon icon={faMagnifyingGlass} className="icon" />
-                                </button>
-                            </div>
-                            <ul id="search-results-container" className="search-results-dropdown"></ul>
-                        </li>
+
+                        <SearchBox/>
                     </ul>
                 </div>
 
-                <div className="collapse-nav">
+                <div className="collapsible-nav">
                     <MainNav/>
                     <CollapsedNav/>
                 </div>

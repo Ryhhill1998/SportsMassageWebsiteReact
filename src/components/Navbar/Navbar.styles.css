@@ -38,111 +38,15 @@ header .container {
     margin-bottom: 0.75em;
 }
 
-/* SEARCH BOX */
-.search-box {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.search-box button:hover {
-    cursor: pointer;
-}
-
-.search-box input {
-    font-size: 0.8rem;
-    width: 90%;
-    min-width: 300px;
-    padding: 0.25em 0.25em 0.25em 0.5em;
-    border: solid 1px #c2c2c2;
-    border-right: none;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
-
-.search-box button {
-    border: solid 2px #06b0dd;
-    background-color: #06b0dd;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    font-size: 1rem;
-    padding: 0.25em 0.35em;
-    margin-left: 0;
-}
-
-.search-box .icon {
-    color: white;
-}
-
-/* SEARCH RESULTS */
-.search-container {
-    position: relative;
-}
-
-.search-results-dropdown {
-    position: absolute;
-    z-index: 10;
-    background-color: white;
-    text-align: left;
-    font-size: 0.8rem;
-    width: 89%;
-    min-width: 280px;
-    margin-left: 0.25em;
-}
-
-.result {
-    border: solid 1px lightgrey;
-    border-top: none;
-    display: inline-block;
-    width: 100%;
-    padding: 0.5em;
-    text-transform: capitalize;
-}
-
-.search-result:hover {
-    background-color: #61c9e5;
-    color: white;
-}
-
-.search-results-dropdown li:first-child > .result {
-    border-top: solid 1px lightgrey;
-}
-
 /* COLLAPSE NAV */
-.collapse-nav {
-    position: relative;
-}
-
-/* DROPDOWN */
-.collapse-nav > div:last-child {
-    background-color: #d7f0f8;
-    border: solid 2px #5fc3e5;
-    border-top: solid 5px #5fc3e5;
-    position: absolute;
-    width: 100%;
+nav > ul > li {
     text-align: center;
-    overflow: hidden;
-}
-
-.collapse-nav > div:last-child ul {
-    margin: 0;
-}
-
-.collapse-nav > div:last-child a {
-    display: inline-block;
     width: 100%;
-    padding: 0.75em 0;
+    padding: 0.5em 0.75em;
 }
 
-.collapse-nav > div:last-child a:hover {
-    background-color: #5fc3e5;
-    color: white;
-    cursor: pointer;
-}
-
-.dropdown-selected {
-    background-color: #5fc3e5;
-    color: white;
-    cursor: default;
+.collapsible-nav {
+    position: relative;
 }
 
 /* --------------- MEDIA QUERIES --------------- */

@@ -6,16 +6,16 @@ import "./CollapsedNav.styles.css";
 const CollapsedNav = () => {
     return (
         <>
-            <nav className="collapsed">
+            <nav className="collapsed-nav">
                 <ul>
                     <li className="dropdown-button" id="hamburger">
                         Menu <FontAwesomeIcon icon={faCircleChevronDown} className="icon dropdown-arrow" />
                     </li>
                 </ul>
             </nav>
-            <div id="dropdown-menu" className="no-display">
+            <div id="dropdown-menu" className="collapsed-nav-dropdown no-display">
                 <ul>
-                    <li><a className="dropdown-selected" href="index.html">Home</a></li>
+                    <li><a className="dropdown-selected" href="">Home</a></li>
                     <li><a href="src/components">Sports Massage</a></li>
                     <li><a href="src/components">Reflexology</a></li>
                     <li><a href="src/components">Swedish Massage</a></li>

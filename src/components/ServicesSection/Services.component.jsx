@@ -7,8 +7,6 @@ import stoneTherapyImageSrc from "../../images/stoneTherapy.jpeg";
 import pamperDaysImageSrc from "../../images/pamperDays.jpeg";
 import massageImageSrc from "../../images/massage.jpeg";
 
-import "./ServicesSection.styles.css";
-
 const cards = [
     {
         imageSrc: sportsMassageImageSrc,
@@ -57,18 +55,15 @@ const cards = [
 
 const ServicesSection = () => {
     return (
-        <section id="section--links">
-            <h2>Our Services</h2>
+        <div className="cards-container">
+            {cards.map((card, i) => {
+                const {imageSrc, heading, content} = card;
 
-            <div className="cards-container">
-                {cards.map((card, i) => {
-                    const {imageSrc, heading, content} = card;
-                    return (
-                        <CardComponent key={i} imageSrc={imageSrc} heading={heading} content={content}/>
-                    )
-                })}
-            </div>
-        </section>
+                return (
+                    <CardComponent key={i} imageSrc={imageSrc} heading={heading} content={content}/>
+                )
+            })}
+        </div>
     );
 };
 
