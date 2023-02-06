@@ -17,14 +17,7 @@ const aboutCardInfo = {
         Sports Massage, Reflexology, Swedish Massage and LA Stone Therapy.`,
         `Our clients typically fall into one of the following categories:`,
         `Those looking for support recovering from a soft tissue injury such as a sprain or pulled muscle.`,
-        `Those seeking relief from pain or discomfort such as back pain sciatica, migraines or headaches.`,
-        `Indeed our treatment can help increase flexibility and elasticity as well as improving function in patients 
-        with osteoarthritis.`,
-        `And there are those that are simply looking to unwind, de-stress and re-energise.`,
-        `There are so many health benefits asssociated with massage that you should never feel guilty about having one!`,
-        `We also offer corporate pamper days to companies who might be looking to reward their team or simply boost 
-        employee morale, helping them to feel revitalised mentally and physically.`,
-        `We are also proud to be part of the Peer Massage Project which offers peer massage sessions to schools.`
+        `Those seeking relief from pain or discomfort such as back pain sciatica, migraines or headaches...`
     ],
     imageSrc: massageImageSrc
 };
