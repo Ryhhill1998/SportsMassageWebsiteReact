@@ -2,6 +2,12 @@
     margin-top: 3em;
 }
 
+.intro-heading {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 4rem;
+}
+
 #section--intro h2 {
     text-align: left;
     margin-bottom: 1em;
