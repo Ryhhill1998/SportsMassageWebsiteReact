@@ -1,11 +1,13 @@
-import Card from "./Card";
-import sportsMassageImageSrc from "../images/sportsMassage.jpeg";
-import reflexologyImageSrc from "../images/reflexology.jpeg";
-import swedishImageSrc from "../images/swedishMassage.jpeg";
-import indianHeadMassageImageSrc from "../images/indianHeadMassage.jpeg";
-import stoneTherapyImageSrc from "../images/stoneTherapy.jpeg";
-import pamperDaysImageSrc from "../images/pamperDays.jpeg";
-import massageImageSrc from "../images/massage.jpeg";
+import CardComponent from "../Card/Card.component";
+import sportsMassageImageSrc from "../../images/sportsMassage.jpeg";
+import reflexologyImageSrc from "../../images/reflexology.jpeg";
+import swedishImageSrc from "../../images/swedishMassage.jpeg";
+import indianHeadMassageImageSrc from "../../images/indianHeadMassage.jpeg";
+import stoneTherapyImageSrc from "../../images/stoneTherapy.jpeg";
+import pamperDaysImageSrc from "../../images/pamperDays.jpeg";
+import massageImageSrc from "../../images/massage.jpeg";
+
+import "./ServicesSection.styles.css";
 
 const cards = [
     {
@@ -62,7 +64,7 @@ const ServicesSection = () => {
                 {cards.map((card, i) => {
                     const {imageSrc, heading, content} = card;
                     return (
-                        <Card key={i} imageSrc={imageSrc} heading={heading} content={content}/>
+                        <CardComponent key={i} imageSrc={imageSrc} heading={heading} content={content}/>
                     )
                 })}
             </div>

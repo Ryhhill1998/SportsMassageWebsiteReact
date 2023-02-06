@@ -2,7 +2,7 @@ import './App.css';
 
 import Navbar from "./components/Navbar/Navbar.component";
 import AboutSection from "./components/AboutSection/AboutSection.component";
-import ServicesSection from "./components/ServicesSection";
+import ServicesSection from "./components/ServicesSection/ServicesSection.component";
 
 import massageImageSrc from "./images/massage.jpeg";
 import TestimonialsSection from "./components/TestimonialsSection";

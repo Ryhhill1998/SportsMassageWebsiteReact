@@ -1,4 +1,6 @@
-const Card = ({imageSrc, heading, content}) => {
+import "./Card.styles.css";
+
+const CardComponent = ({imageSrc, heading, content}) => {
     return (
         <figure>
             <div>
@@ -10,7 +12,7 @@ const Card = ({imageSrc, heading, content}) => {
 
                 <p>{content}</p>
 
-                <a href="" className="read-more">
+                <a href="src/components" className="read-more">
                     Read more
                 </a>
             </figcaption>
@@ -18,4 +20,4 @@ const Card = ({imageSrc, heading, content}) => {
     )
 };
 
-export default Card;
+export default CardComponent;
