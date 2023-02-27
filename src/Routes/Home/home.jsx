@@ -1,13 +1,13 @@
-import './App.css';
+import './home.css';
 
-import Navbar from "./components/Navbar/Navbar.component";
-import About from "./components/AboutSection/About.component";
-import Services from "./components/ServicesSection/Services.component";
-import Footer from "./components/Footer/Footer.component";
-import Carousel from "./components/Carousel/Carousel.component";
-import DottedSeparator from "./components/DottedSeparator/DottedSeparator.component";
+import Navbar from "../../Components/Navbar/Navbar.component";
+import About from "../../Components/AboutSection/About.component";
+import Services from "../../Components/ServicesSection/Services.component";
+import Footer from "../../Components/Footer/Footer.component";
+import Carousel from "../../Components/Carousel/Carousel.component";
+import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.component";
 
-import massageImageSrc from "./images/massage.jpeg";
+import massageImageSrc from "../../Images/massage.jpeg";
 
 const aboutCardInfo = {
     heading: "About Us",
@@ -23,8 +23,6 @@ const aboutCardInfo = {
 };
 
 const App = () => {
-    const {heading, content, imageSrc} = aboutCardInfo;
-
     return (
         <>
             <Navbar/>
@@ -33,7 +31,7 @@ const App = () => {
                 <h1 className="intro-heading">Welcome!</h1>
 
                 <section id="section--about">
-                    <About heading={heading} content={content} imageSrc={imageSrc} />
+                    <About {...aboutCardInfo} />
                 </section>
 
                 <DottedSeparator/>

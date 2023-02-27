@@ -1,9 +1,9 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleChevronLeft, faCircleChevronRight} from "@fortawesome/free-solid-svg-icons";
 import Slide from "./Slide/Slide.component";
-import icon1 from "../../images/icon1.png";
-import icon2 from "../../images/icon2.png";
-import icon3 from "../../images/icon3.png";
+import icon1 from "../../Images/icon1.png";
+import icon2 from "../../Images/icon2.png";
+import icon3 from "../../Images/icon3.png";
 
 import "./Carousel.styles.css";
 

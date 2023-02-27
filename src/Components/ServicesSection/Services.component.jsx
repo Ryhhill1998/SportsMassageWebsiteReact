@@ -1,11 +1,11 @@
 import CardComponent from "../Card/Card.component";
-import sportsMassageImageSrc from "../../images/sportsMassage.jpeg";
-import reflexologyImageSrc from "../../images/reflexology.jpeg";
-import swedishImageSrc from "../../images/swedishMassage.jpeg";
-import indianHeadMassageImageSrc from "../../images/indianHeadMassage.jpeg";
-import stoneTherapyImageSrc from "../../images/stoneTherapy.jpeg";
-import pamperDaysImageSrc from "../../images/pamperDays.jpeg";
-import massageImageSrc from "../../images/massage.jpeg";
+import sportsMassageImageSrc from "../../Images/sportsMassage.jpeg";
+import reflexologyImageSrc from "../../Images/reflexology.jpeg";
+import swedishImageSrc from "../../Images/swedishMassage.jpeg";
+import indianHeadMassageImageSrc from "../../Images/indianHeadMassage.jpeg";
+import stoneTherapyImageSrc from "../../Images/stoneTherapy.jpeg";
+import pamperDaysImageSrc from "../../Images/pamperDays.jpeg";
+import massageImageSrc from "../../Images/massage.jpeg";
 
 import "./Services.styles.css";
 
