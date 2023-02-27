@@ -9,7 +9,7 @@ const AboutSection = ({heading, content, imageSrc}) => {
                 <h2>{heading}</h2>
 
                 <div className="description">
-                    {content.map(entry => <p>{entry}</p>)}
+                    {content.map((entry, i) => <p key={`${heading}-${i}`}>{entry}</p>)}
                 </div>
 
                 <ReadMore/>

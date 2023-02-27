@@ -1,6 +1,6 @@
 import './home.css';
 
-import Navbar from "../../Components/Navbar/Navbar.component";
+import Navbar from "../Navigation/Navbar.component";
 import About from "../../Components/AboutSection/About.component";
 import Services from "../../Components/ServicesSection/Services.component";
 import Footer from "../../Components/Footer/Footer.component";

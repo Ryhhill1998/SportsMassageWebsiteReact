@@ -15,7 +15,7 @@ const CollapsedNav = () => {
             </nav>
             <div id="dropdown-menu" className="collapsed-nav-dropdown no-display">
                 <ul>
-                    <li><a className="dropdown-selected" href="">Home</a></li>
+                    <li><a className="dropdown-selected" href="Navigation/CollapsedNav">Home</a></li>
                     <li><a href="src/components">Sports Massage</a></li>
                     <li><a href="src/components">Reflexology</a></li>
                     <li><a href="src/components">Swedish Massage</a></li>
