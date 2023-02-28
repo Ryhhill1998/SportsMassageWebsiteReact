@@ -3,8 +3,30 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import "./CollapsedNav.styles.css";
 import {Link} from "react-router-dom";
+import {useEffect} from "react";
 
 const CollapsedNav = () => {
+
+    useEffect(() => {
+        const splitRoute = window.location.href.split("/").at(-1);
+
+        let activeLink;
+
+        if (!splitRoute.length) {
+            activeLink = document.querySelector("#dropdown-menu a:first-child");
+        } else {
+            const routeName = splitRoute.split("-")
+                .map(word => word.slice(0, 1).toUpperCase() + word.slice(1)).join(" ");
+
+            const allLinks = [...document.querySelectorAll("#dropdown-menu a")];
+            activeLink = allLinks.filter(link => link.innerHTML === routeName)[0];
+        }
+
+        highlightActiveLink(activeLink);
+    }, []);
+
+    const highlightActiveLink = (target) => target.classList.add("dropdown-selected");
+
     const toggleDropdown = () => {
         document.getElementById("dropdown-menu").classList.toggle("no-display");
     }
@@ -40,7 +62,7 @@ const CollapsedNav = () => {
             </nav>
             <div id="dropdown-menu" className="collapsed-nav-dropdown no-display">
                 <ul>
-                    <li><Link to={"/"} onClick={showActiveLink} className="dropdown-selected">Home</Link></li>
+                    <li><Link to={"/"} onClick={showActiveLink}>Home</Link></li>
                     <li><Link to={"/sports-massage"} onClick={showActiveLink}>Sports Massage</Link></li>
                     <li><Link to={"/reflexology"} onClick={showActiveLink}>Reflexology</Link></li>
                     <li><Link to={"/swedish-massage"} onClick={showActiveLink}>Swedish Massage</Link></li>
