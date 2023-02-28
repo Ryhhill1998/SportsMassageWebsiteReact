@@ -14,6 +14,7 @@ import Home from "./Routes/Home/home.jsx";
 import ErrorPage from "./Routes/ErrorPage/errorPage";
 import SportsMassage from "./Routes/SportsMassage/sportsMassage";
 import SwedishMassage from "./Routes/SwedishMassage/swedishMassage";
+import Reflexology from "./Routes/Reflexology/reflexology";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path: "/swedish-massage",
                 element: <SwedishMassage/>,
+            },
+            {
+                path: "/reflexology",
+                element: <Reflexology/>,
             },
         ],
     },
