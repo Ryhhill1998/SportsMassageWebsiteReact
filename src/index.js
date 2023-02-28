@@ -15,6 +15,8 @@ import ErrorPage from "./Routes/ErrorPage/errorPage";
 import SportsMassage from "./Routes/SportsMassage/sportsMassage";
 import SwedishMassage from "./Routes/SwedishMassage/swedishMassage";
 import Reflexology from "./Routes/Reflexology/reflexology";
+import IndianHeadMassage from "./Routes/IndianHeadMassage/indianHeadMassage";
+import StoneTherapy from "./Routes/StoneTherapy/stoneTherapy";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
             {
                 path: "/reflexology",
                 element: <Reflexology/>,
+            },
+            {
+                path: "/indian-head-massage",
+                element: <IndianHeadMassage/>,
+            },
+            {
+                path: "/la-stone-therapy",
+                element: <StoneTherapy/>,
             },
         ],
     },
