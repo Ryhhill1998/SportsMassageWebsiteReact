@@ -17,6 +17,8 @@ import SwedishMassage from "./Routes/SwedishMassage/swedishMassage";
 import Reflexology from "./Routes/Reflexology/reflexology";
 import IndianHeadMassage from "./Routes/IndianHeadMassage/indianHeadMassage";
 import StoneTherapy from "./Routes/StoneTherapy/stoneTherapy";
+import PeerToPeer from "./Routes/PeerToPeer/peerToPeer";
+import PamperDays from "./Routes/CorporatePamperDays/corporatePamperDays";
 
 const router = createBrowserRouter([
     {
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
             {
                 path: "/la-stone-therapy",
                 element: <StoneTherapy/>,
+            },
+            {
+                path: "/peer-to-peer",
+                element: <PeerToPeer/>,
+            },
+            {
+                path: "/corporate-pamper-days",
+                element: <PamperDays/>,
             },
         ],
     },
