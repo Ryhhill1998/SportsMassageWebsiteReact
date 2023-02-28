@@ -8,15 +8,23 @@ import "./MainNav.styles.css";
 const MainNav = () => {
 
     const showActiveLink = ({target}) => {
+        removeAllActiveLinks();
+
+        target.classList.add("dropdown-selected");
+    }
+
+    const removeAllActiveLinks = () => {
         const allLinks = document.querySelectorAll("#services-dropdown a");
 
         allLinks.forEach(link => {
             link.classList.remove("dropdown-selected");
         });
 
-        target.classList.add("dropdown-selected");
+        hideServices();
+    }
 
-        toggleServices();
+    const hideServices = () => {
+        document.getElementById("services-dropdown").classList.add("no-display");
     }
 
     const toggleServices = () => {
@@ -26,7 +34,7 @@ const MainNav = () => {
     return (
         <nav className="main-nav">
             <ul>
-                <li><Link to={`/`}>Home</Link></li>
+                <li><Link to={`/`} onClick={removeAllActiveLinks}>Home</Link></li>
                 <li className="services">
                     <a className="dropdown-button" id="services-button" onClick={toggleServices}>
                         Services
