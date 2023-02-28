@@ -1,0 +1,23 @@
+.conditions-card {
+    background-color: #d7f0f8;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0.5em 0.5em 1em rgba(128, 128, 128, 1);
+}
+
+.conditions-card h2 {
+    background-color: #61c9e5;
+    color: white;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+.conditions-card ul {
+    padding: 1em;
+}
+
+.conditions-card li {
+    padding: 0.75em;
+}
