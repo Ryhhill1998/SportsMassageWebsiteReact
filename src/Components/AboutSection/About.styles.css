@@ -13,6 +13,7 @@
     background-color: rgba(215, 240, 248, 0.7);
     border-radius: 8px;
     overflow: hidden;
+    min-height: 550px;
 }
 
 .about .content {
