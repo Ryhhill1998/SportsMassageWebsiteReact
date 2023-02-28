@@ -7,8 +7,24 @@ import Logo from "../../Components/Logo/Logo.component";
 import SearchBox from "../../Components/SearchBox/SearchBox.component";
 
 import "./Navbar.styles.css";
+import {useEffect} from "react";
 
 const Navbar = () => {
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector("header");
+            const h1 = document.querySelector("h1");
+            const yPosition = h1 ? 320 : 200;
+
+            if (window.scrollY > yPosition) {
+                header.classList.add("shrink");
+            } else {
+                header.classList.remove("shrink");
+            }
+        });
+    }, []);
+
     return (
         <header>
             <div className="container">
