@@ -2,7 +2,6 @@ import './home.css';
 
 import About from "../../Components/AboutSection/About.component";
 import Services from "../../Components/ServicesSection/Services.component";
-import Footer from "../../Components/Footer/Footer.component";
 import Carousel from "../../Components/Carousel/Carousel.component";
 import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.component";
 
