@@ -1,3 +1,6 @@
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCircleChevronRight} from '@fortawesome/free-solid-svg-icons';
+
 import "./applicableCondtionsCard.styles.css";
 
 const ApplicableConditionsCard = () => {
@@ -5,15 +8,42 @@ const ApplicableConditionsCard = () => {
         <div className="conditions-card">
             <h2>Applicable Conditions</h2>
             <ul className="bullet-list">
-                <li>Hormonal imbalances</li>
-                <li>Menopause</li>
-                <li>Back pain</li>
-                <li>Migraines, headaches</li>
-                <li>Sleep disorders</li>
-                <li>Digestive problems</li>
-                <li>Circulatory problems</li>
-                <li>Stress-related disorders</li>
-                <li>Arthritis</li>
+                <li>
+                    <FontAwesomeIcon icon={faCircleChevronRight} size="2x" className="icon" />
+                    Hormonal imbalances
+                </li>
+                <li>
+                    <FontAwesomeIcon icon={faCircleChevronRight} size="2x" className="icon" />
+                    Menopause
+                </li>
+                <li>
+                    <FontAwesomeIcon icon={faCircleChevronRight} size="2x" className="icon" />
+                    Back pain
+                </li>
+                <li>
+                    <FontAwesomeIcon icon={faCircleChevronRight} size="2x" className="icon" />
+                    Migraines, headaches
+                </li>
+                <li>
+                    <FontAwesomeIcon icon={faCircleChevronRight} size="2x" className="icon" />
+                    Sleep disorders
+                </li>
+                <li>
+                    <FontAwesomeIcon icon={faCircleChevronRight} size="2x" className="icon" />
+                    Digestive problems
+                </li>
+                <li>
+                    <FontAwesomeIcon icon={faCircleChevronRight} size="2x" className="icon" />
+                    Circulatory problems
+                </li>
+                <li>
+                    <FontAwesomeIcon icon={faCircleChevronRight} size="2x" className="icon" />
+                    Stress-related disorders
+                </li>
+                <li>
+                    <FontAwesomeIcon icon={faCircleChevronRight} size="2x" className="icon" />
+                    Arthritis
+                </li>
             </ul>
         </div>
     );
