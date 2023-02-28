@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
 
@@ -16,22 +18,22 @@ const MainNav = () => {
     return (
         <nav className="main-nav">
             <ul>
-                <li><a href="">Home</a></li>
+                <li><Link to={`/`}>Home</Link></li>
                 <li className="services" onMouseLeave={toggleServices}>
-                    <a className="dropdown-button" id="services-button" onClick={toggleServices}
+                    <Link to={""} className="dropdown-button" id="services-button" onClick={toggleServices}
                        onMouseEnter={showServices}>
                         Services
                         <FontAwesomeIcon icon={faCircleChevronDown} className="icon dropdown-arrow"/>
-                    </a>
+                    </Link>
                     <div id="services-dropdown" className="no-display">
                         <ul>
-                            <li><a href="src/components">Sports Massage</a></li>
-                            <li><a href="src/components">Reflexology</a></li>
-                            <li><a href="src/components">Swedish Massage</a></li>
-                            <li><a href="src/components">Indian Head Massage</a></li>
-                            <li><a href="src/components">LA Stone Therapy</a></li>
-                            <li><a href="src/components">Corporate Pamper Days</a></li>
-                            <li><a href="src/components">Peer-to-Peer Massage</a></li>
+                            <li><Link to={`/sports-massage`} href="src/components">Sports Massage</Link></li>
+                            <li><Link to={`/reflexology`} href="src/components">Reflexology</Link></li>
+                            <li><Link to={`/swedish-massage`} href="src/components">Swedish Massage</Link></li>
+                            <li><Link to={`/indian-head-massage`} href="src/components">Indian Head Massage</Link></li>
+                            <li><Link to={`/la-stone-therapy`} href="src/components">LA Stone Therapy</Link></li>
+                            <li><Link to={`/corporate-pamper-days`} href="src/components">Corporate Pamper Days</Link></li>
+                            <li><Link to={`/peer-to-peer`} href="src/components">Peer-to-Peer Massage</Link></li>
                         </ul>
                     </div>
                 </li>
