@@ -4,12 +4,22 @@ import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
 import "./MainNav.styles.css";
 
 const MainNav = () => {
+
+    const toggleServices = () => {
+        document.getElementById("services-dropdown").classList.toggle("no-display");
+    }
+
+    const showServices = () => {
+        document.getElementById("services-dropdown").classList.remove("no-display");
+    }
+
     return (
         <nav className="main-nav">
             <ul>
-                <li><a href="src/components#top">Home</a></li>
-                <li className="services">
-                    <a className="dropdown-button" id="services-button">
+                <li><a href="">Home</a></li>
+                <li className="services" onMouseLeave={toggleServices}>
+                    <a className="dropdown-button" id="services-button" onClick={toggleServices}
+                       onMouseEnter={showServices}>
                         Services
                         <FontAwesomeIcon icon={faCircleChevronDown} className="icon dropdown-arrow"/>
                     </a>
