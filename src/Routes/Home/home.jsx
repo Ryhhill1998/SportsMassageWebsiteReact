@@ -1,6 +1,5 @@
 import './home.css';
 
-import Navbar from "../Navigation/Navbar.component";
 import About from "../../Components/AboutSection/About.component";
 import Services from "../../Components/ServicesSection/Services.component";
 import Footer from "../../Components/Footer/Footer.component";
@@ -24,33 +23,27 @@ const aboutCardInfo = {
 
 const App = () => {
     return (
-        <>
-            <Navbar/>
+        <main className="container">
+            <h1 className="intro-heading">Welcome!</h1>
 
-            <main className="container">
-                <h1 className="intro-heading">Welcome!</h1>
+            <section id="section--about">
+                <About {...aboutCardInfo} />
+            </section>
 
-                <section id="section--about">
-                    <About {...aboutCardInfo} />
-                </section>
+            <DottedSeparator/>
 
-                <DottedSeparator/>
+            <section id="section--services">
+                <h2>Our Services</h2>
+                <Services/>
+            </section>
 
-                <section id="section--services">
-                    <h2>Our Services</h2>
-                    <Services/>
-                </section>
+            <DottedSeparator/>
 
-                <DottedSeparator/>
-
-                <section id="section--testimonials">
-                    <h2>Testimonials</h2>
-                    <Carousel/>
-                </section>
-            </main>
-
-            <Footer/>
-        </>
+            <section id="section--testimonials">
+                <h2>Testimonials</h2>
+                <Carousel/>
+            </section>
+        </main>
     );
 }
 

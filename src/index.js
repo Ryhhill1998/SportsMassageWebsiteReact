@@ -9,19 +9,24 @@ import {
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import Navbar from "./Routes/Navigation/Navbar.component";
+import BasicLayout from "./Routes/BasicLayout/basicLayout";
 import Home from "./Routes/Home/home.jsx";
 import ErrorPage from "./Routes/ErrorPage/errorPage";
+import SportsMassage from "./Routes/SportsMassage/sportsMassage";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Navbar/>,
+        element: <BasicLayout/>,
         errorElement: <ErrorPage />,
         children: [
             {
                 path: "/",
                 element: <Home/>,
+            },
+            {
+                path: "/sports-massage",
+                element: <SportsMassage/>,
             },
         ],
     },
