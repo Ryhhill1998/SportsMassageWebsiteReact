@@ -15,23 +15,20 @@ const MainNav = () => {
         });
 
         target.classList.add("dropdown-selected");
+
+        toggleServices();
     }
 
     const toggleServices = () => {
         document.getElementById("services-dropdown").classList.toggle("no-display");
     }
 
-    const showServices = () => {
-        document.getElementById("services-dropdown").classList.remove("no-display");
-    }
-
     return (
         <nav className="main-nav">
             <ul>
                 <li><Link to={`/`}>Home</Link></li>
-                <li className="services" onMouseLeave={toggleServices}>
-                    <a className="dropdown-button" id="services-button" onClick={toggleServices}
-                       onMouseEnter={showServices}>
+                <li className="services">
+                    <a className="dropdown-button" id="services-button" onClick={toggleServices}>
                         Services
                         <FontAwesomeIcon icon={faCircleChevronDown} className="icon dropdown-arrow"/>
                     </a>
