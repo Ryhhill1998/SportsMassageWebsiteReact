@@ -4,14 +4,30 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 import "./MainNav.styles.css";
+import {useEffect} from "react";
 
 const MainNav = () => {
 
+    useEffect(() => {
+        const splitRoute = window.location.href.split("/").at(-1);
+
+        if (!splitRoute.length) return;
+
+        const routeName = splitRoute.split("-")
+            .map(word => word.slice(0, 1).toUpperCase() + word.slice(1)).join(" ");
+
+        const allLinks = [...document.querySelectorAll("#services-dropdown a")];
+        const activeLink = allLinks.filter(link => link.innerHTML === routeName);
+
+        highlightActiveLink(activeLink[0]);
+    }, []);
+
     const showActiveLink = ({target}) => {
         removeAllActiveLinks();
-
-        target.classList.add("dropdown-selected");
+        highlightActiveLink(target);
     }
+
+    const highlightActiveLink = (target) => target.classList.add("dropdown-selected");
 
     const removeAllActiveLinks = () => {
         const allLinks = document.querySelectorAll("#services-dropdown a");
