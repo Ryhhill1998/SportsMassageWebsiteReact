@@ -1,42 +1,11 @@
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 import "./MainNav.styles.css";
-import {useEffect} from "react";
 
 const MainNav = () => {
-
-    useEffect(() => {
-        const splitRoute = window.location.href.split("/").at(-1);
-
-        if (!splitRoute.length) return;
-
-        const routeName = splitRoute.split("-").join(" ").toLowerCase();
-
-        const allLinks = [...document.querySelectorAll("#services-dropdown a")];
-        const activeLink = allLinks.filter(link => link.innerHTML.split("-").join(" ").toLowerCase() === routeName)[0];
-
-        highlightActiveLink(activeLink);
-    }, []);
-
-    const showActiveLink = ({target}) => {
-        removeAllActiveLinks();
-        highlightActiveLink(target);
-    }
-
-    const highlightActiveLink = (target) => target.classList.add("dropdown-selected");
-
-    const removeAllActiveLinks = () => {
-        const allLinks = document.querySelectorAll("#services-dropdown a");
-
-        allLinks.forEach(link => {
-            link.classList.remove("dropdown-selected");
-        });
-
-        hideServices();
-    }
 
     const hideServices = () => {
         document.getElementById("services-dropdown").classList.add("no-display");
@@ -49,7 +18,7 @@ const MainNav = () => {
     return (
         <nav className="main-nav">
             <ul>
-                <li><Link to={`/`} onClick={removeAllActiveLinks}>Home</Link></li>
+                <li><Link to={`/`} onClick={hideServices}>Home</Link></li>
                 <li className="services">
                     <a className="dropdown-button" id="services-button" onClick={toggleServices}>
                         Services
@@ -58,60 +27,68 @@ const MainNav = () => {
                     <div id="services-dropdown" className="no-display">
                         <ul>
                             <li>
-                                <Link
+                                <NavLink
                                     to={`/sports-massage`}
-                                    onClick={showActiveLink}>
+                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                                    onClick={hideServices}>
                                     Sports Massage
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
+                                <NavLink
                                     to={`/reflexology`}
-                                    onClick={showActiveLink}>
+                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                                    onClick={hideServices}>
                                     Reflexology
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
+                                <NavLink
                                     to={`/swedish-massage`}
-                                    onClick={showActiveLink}>
+                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                                    onClick={hideServices}>
                                     Swedish Massage
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
+                                <NavLink
                                     to={`/indian-head-massage`}
-                                    onClick={showActiveLink}>
+                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                                    onClick={hideServices}>
                                     Indian Head Massage
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
+                                <NavLink
                                     to={`/la-stone-therapy`}
-                                    onClick={showActiveLink}>
+                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                                    onClick={hideServices}>
                                     LA Stone Therapy
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
+                                <NavLink
                                     to={`/acupuncture`}
-                                    onClick={showActiveLink}>
+                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                                    onClick={hideServices}>
                                     Acupuncture
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
+                                <NavLink
                                     to={`/corporate-pamper-days`}
-                                    onClick={showActiveLink}>
+                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                                    onClick={hideServices}>
                                     Corporate Pamper Days
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link
+                                <NavLink
                                     to={`/peer-to-peer-massage`}
-                                    onClick={showActiveLink}>
+                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                                    onClick={hideServices}>
                                     Peer-to-Peer Massage
-                                </Link>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>

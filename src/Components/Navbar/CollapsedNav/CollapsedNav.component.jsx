@@ -2,31 +2,10 @@ import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import "./CollapsedNav.styles.css";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {useEffect} from "react";
 
 const CollapsedNav = () => {
-
-    useEffect(() => {
-        const splitRoute = window.location.href.split("/").at(-1);
-
-        let activeLink;
-
-        if (!splitRoute.length) {
-            activeLink = document.querySelector("#dropdown-menu a:first-child");
-        } else {
-            const routeName = splitRoute.split("-").join(" ").toLowerCase();
-
-            const allLinks = [...document.querySelectorAll("#dropdown-menu a")];
-            activeLink = allLinks.filter(link => link.innerHTML.split("-").join(" ").toLowerCase() === routeName)[0];
-        }
-
-        if (!activeLink) return;
-
-        highlightActiveLink(activeLink);
-    }, []);
-
-    const highlightActiveLink = (target) => target.classList.add("dropdown-selected");
 
     const toggleDropdown = () => {
         document.getElementById("dropdown-menu").classList.toggle("no-display");
@@ -34,22 +13,6 @@ const CollapsedNav = () => {
 
     const hideDropdown = () => {
         document.getElementById("dropdown-menu").classList.add("no-display");
-    }
-
-    const showActiveLink = ({target}) => {
-        removeAllActiveLinks();
-
-        target.classList.add("dropdown-selected");
-    }
-
-    const removeAllActiveLinks = () => {
-        const allLinks = document.querySelectorAll("#dropdown-menu a");
-
-        allLinks.forEach(link => {
-            link.classList.remove("dropdown-selected");
-        });
-
-        hideDropdown();
     }
 
     return (
@@ -63,15 +26,71 @@ const CollapsedNav = () => {
             </nav>
             <div id="dropdown-menu" className="collapsed-nav-dropdown no-display">
                 <ul>
-                    <li><Link to={"/"} onClick={showActiveLink}>Home</Link></li>
-                    <li><Link to={"/sports-massage"} onClick={showActiveLink}>Sports Massage</Link></li>
-                    <li><Link to={"/reflexology"} onClick={showActiveLink}>Reflexology</Link></li>
-                    <li><Link to={"/swedish-massage"} onClick={showActiveLink}>Swedish Massage</Link></li>
-                    <li><Link to={"/indian-head-massage"} onClick={showActiveLink}>Indian Head Massage</Link></li>
-                    <li><Link to={"/la-stone-therapy"} onClick={showActiveLink}>LA Stone Therapy</Link></li>
-                    <li><Link to={"/acupuncture"} onClick={showActiveLink}>Acupuncture</Link></li>
-                    <li><Link to={"/corporate-pamper-days"} onClick={showActiveLink}>Corporate Pamper Days</Link></li>
-                    <li><Link to={"/peer-to-peer-massage"} onClick={showActiveLink}>Peer-to-Peer Massage</Link></li>
+                    <li><Link to={"/"} onClick={hideDropdown}>Home</Link></li>
+                    <li>
+                        <NavLink
+                            to={"/sports-massage"}
+                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                            onClick={hideDropdown}>
+                            Sports Massage
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to={"/reflexology"}
+                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                            onClick={hideDropdown}>
+                            Reflexology
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to={"/swedish-massage"}
+                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                            onClick={hideDropdown}>
+                            Swedish Massage
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to={"/indian-head-massage"}
+                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                            onClick={hideDropdown}>
+                            Indian Head Massage
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to={"/la-stone-therapy"}
+                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                            onClick={hideDropdown}>
+                            LA Stone Therapy
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to={"/acupuncture"}
+                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                            onClick={hideDropdown}>
+                            Acupuncture
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to={"/corporate-pamper-days"}
+                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                            onClick={hideDropdown}>
+                            Corporate Pamper Days
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to={"/peer-to-peer-massage"}
+                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
+                            onClick={hideDropdown}>
+                            Peer-to-Peer Massage
+                        </NavLink>
+                    </li>
                     <li><Link to={"/"}>FAQs</Link></li>
                     <li><Link to={"/"}>Testimonials</Link></li>
                     <li><Link to={"/"} className="contact-button">Contact</Link></li>
