@@ -1,7 +1,7 @@
 .benefit-card {
     grid-column-start: 1;
     grid-row-start: 1;
-    margin: 3.75em auto 0;
+    margin: 3.75em auto 8em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,10 +9,6 @@
     border-radius: 8px;
     padding: 3.5em 1em 0;
     position: relative;
-}
-
-.benefit-card:last-child {
-    margin-bottom: 0;
 }
 
 .benefit-card .icon-image-container {

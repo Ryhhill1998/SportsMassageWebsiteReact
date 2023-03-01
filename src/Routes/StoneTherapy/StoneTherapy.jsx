@@ -62,6 +62,7 @@ const StoneTherapy = () => {
             <DottedSeparator/>
 
             <section id="section--benefits">
+                {/*<h2>Is this the treatment for you?</h2>*/}
                 <BenefitsSection conditions={conditions} benefits={benefits}/>
             </section>
 
