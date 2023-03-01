@@ -5,9 +5,10 @@ import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.co
 import BenefitsSection from "../../Components/BenefitsSection/BenefitsSection.component";
 
 import stoneTherapyImageSrc from "../../Images/stoneTherapy.jpeg";
-import immunity from "../../Images/immune-system.png";
 import stress from "../../Images/stress.png";
 import relax from "../../Images/relax.png";
+import energy from "../../Images/energy.png";
+import heart from "../../Images/heart.png";
 
 const cardInfo = {
     heading: "LA Stone Therapy",
@@ -22,29 +23,32 @@ const cardInfo = {
 };
 
 const conditions = [
-    "Hormonal imbalances",
-    "Menopause",
+    "Muscular pain",
+    "Poor circulation",
+    "Rheumatic and arthritic conditions",
+    "Fibromyalgia",
     "Back pain",
-    "Migraines, headaches",
-    "Sleep disorders",
-    "Digestive problems",
-    "Circulatory problems",
-    "Stress-related disorders",
-    "Arthritis"
+    "Stress",
+    "Insomnia",
+    "Depression"
 ]
 
 const benefits = [
     {
-        iconImageSrc: immunity,
-        description: "Helps boost the immune system"
+        iconImageSrc: energy,
+        description: "Leaves you feeling energised"
     },
     {
         iconImageSrc: stress,
         description: "Helps relieve stress and tension"
     },
     {
+        iconImageSrc: heart,
+        description: "Helps to improve circulation"
+    },
+    {
         iconImageSrc: relax,
-        description: "Helps relax and detoxify the body"
+        description: "Helps relax the body"
     }
 ];
 
