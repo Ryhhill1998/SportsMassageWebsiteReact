@@ -4,21 +4,17 @@ import ApplicableConditionsCard from "../ApplicableConditionsCard/ApplicableCond
 
 const BenefitsSection = ({conditions, benefits}) => {
     return (
-        <>
+        <div className="benefits-section-container">
             <div className="conditions-card-container">
                 <ApplicableConditionsCard conditions={conditions}/>
             </div>
 
-            <div className="benefits-container">
-                <h2>BENEFITS</h2>
-
-                <div className="benefits-card-container">
-                    {benefits.map((benefit, i) => {
-                        return <BenefitCard key={i} {...benefit}/>
-                    })}
-                </div>
+            <div className="benefits-cards-container">
+                {benefits.map((benefit, i) => {
+                    return <BenefitCard key={i} {...benefit}/>
+                })}
             </div>
-        </>
+        </div>
     );
 }
 

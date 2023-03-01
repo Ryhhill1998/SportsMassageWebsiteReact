@@ -5,9 +5,9 @@ import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.co
 import BenefitsSection from "../../Components/BenefitsSection/BenefitsSection.component";
 
 import indianHeadMassageImageSrc from "../../Images/indianHeadMassage.jpeg";
-import immunity from "../../Images/immune-system.png";
+import energy from "../../Images/energy.png";
 import stress from "../../Images/stress.png";
-import relax from "../../Images/relax.png";
+import heart from "../../Images/heart.png";
 
 const cardInfo = {
     heading: "Indian Head Massage",
@@ -23,29 +23,27 @@ const cardInfo = {
 };
 
 const conditions = [
-    "Hormonal imbalances",
-    "Menopause",
-    "Back pain",
-    "Migraines, headaches",
-    "Sleep disorders",
-    "Digestive problems",
-    "Circulatory problems",
-    "Stress-related disorders",
-    "Arthritis"
+    "Tension headaches",
+    "Migraines",
+    "Eye strain",
+    "Tinnitus and other ear problems",
+    "Neck and shoulder tension",
+    "Stress",
+    "Anxiety and depression"
 ]
 
 const benefits = [
     {
-        iconImageSrc: immunity,
-        description: "Helps boost the immune system"
+        iconImageSrc: energy,
+        description: "Leaves you feeling energised"
     },
     {
         iconImageSrc: stress,
         description: "Helps relieve stress and tension"
     },
     {
-        iconImageSrc: relax,
-        description: "Helps relax and detoxify the body"
+        iconImageSrc: heart,
+        description: "Helps to improve circulation"
     }
 ];
 
