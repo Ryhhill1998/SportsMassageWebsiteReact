@@ -52,7 +52,7 @@ const router = createBrowserRouter([
                 element: <StoneTherapy/>,
             },
             {
-                path: "/peer-to-peer",
+                path: "/peer-to-peer-massage",
                 element: <PeerToPeer/>,
             },
             {

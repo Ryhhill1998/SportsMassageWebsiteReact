@@ -13,13 +13,12 @@ const MainNav = () => {
 
         if (!splitRoute.length) return;
 
-        const routeName = splitRoute.split("-")
-            .map(word => word.slice(0, 1).toUpperCase() + word.slice(1)).join(" ");
+        const routeName = splitRoute.split("-").join(" ").toLowerCase();
 
         const allLinks = [...document.querySelectorAll("#services-dropdown a")];
-        const activeLink = allLinks.filter(link => link.innerHTML === routeName);
+        const activeLink = allLinks.filter(link => link.innerHTML.split("-").join(" ").toLowerCase() === routeName)[0];
 
-        highlightActiveLink(activeLink[0]);
+        highlightActiveLink(activeLink);
     }, []);
 
     const showActiveLink = ({target}) => {
@@ -109,7 +108,7 @@ const MainNav = () => {
                             </li>
                             <li>
                                 <Link
-                                    to={`/peer-to-peer`}
+                                    to={`/peer-to-peer-massage`}
                                     onClick={showActiveLink}>
                                     Peer-to-Peer Massage
                                 </Link>

@@ -15,12 +15,13 @@ const CollapsedNav = () => {
         if (!splitRoute.length) {
             activeLink = document.querySelector("#dropdown-menu a:first-child");
         } else {
-            const routeName = splitRoute.split("-")
-                .map(word => word.slice(0, 1).toUpperCase() + word.slice(1)).join(" ");
+            const routeName = splitRoute.split("-").join(" ").toLowerCase();
 
             const allLinks = [...document.querySelectorAll("#dropdown-menu a")];
-            activeLink = allLinks.filter(link => link.innerHTML === routeName)[0];
+            activeLink = allLinks.filter(link => link.innerHTML.split("-").join(" ").toLowerCase() === routeName)[0];
         }
+
+        if (!activeLink) return;
 
         highlightActiveLink(activeLink);
     }, []);
@@ -68,8 +69,9 @@ const CollapsedNav = () => {
                     <li><Link to={"/swedish-massage"} onClick={showActiveLink}>Swedish Massage</Link></li>
                     <li><Link to={"/indian-head-massage"} onClick={showActiveLink}>Indian Head Massage</Link></li>
                     <li><Link to={"/la-stone-therapy"} onClick={showActiveLink}>LA Stone Therapy</Link></li>
+                    <li><Link to={"/acupuncture"} onClick={showActiveLink}>Acupuncture</Link></li>
                     <li><Link to={"/corporate-pamper-days"} onClick={showActiveLink}>Corporate Pamper Days</Link></li>
-                    <li><Link to={"/peer-to-peer"} onClick={showActiveLink}>Peer-to-Peer Massage</Link></li>
+                    <li><Link to={"/peer-to-peer-massage"} onClick={showActiveLink}>Peer-to-Peer Massage</Link></li>
                     <li><Link to={"/"}>FAQs</Link></li>
                     <li><Link to={"/"}>Testimonials</Link></li>
                     <li><Link to={"/"} className="contact-button">Contact</Link></li>

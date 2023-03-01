@@ -58,7 +58,7 @@ const cards = [
         imageSrc: massageImageSrc,
         heading: "Peer-to-Peer Massages",
         content: `Our Peer-to-Peer Massage programme is aimed specifically at children aged 4-13 years.`,
-        route: "/peer-to-peer"
+        route: "/peer-to-peer-massage"
     }
 ];
 

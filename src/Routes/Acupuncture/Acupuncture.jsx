@@ -1,5 +1,7 @@
 import "./Acupuncture.css";
 
+import {useEffect} from "react";
+
 import About from "../../Components/AboutSection/About.component";
 import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.component";
 import BenefitsSection from "../../Components/BenefitsSection/BenefitsSection.component";
@@ -9,7 +11,6 @@ import pain from "../../Images/muscle-pain.png";
 import healing from "../../Images/healing.png";
 import stress from "../../Images/stress.png";
 import energy from "../../Images/energy.png";
-import {useEffect} from "react";
 
 const cardInfo = {
     heading: "Acupuncture",
