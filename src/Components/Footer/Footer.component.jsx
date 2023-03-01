@@ -10,7 +10,7 @@ const Footer = () => {
 
             <ul>
                 <li>
-                    <a href="https://www.facebook.com/rrsportsmassage.co.uk" target="_blank">
+                    <a href="https://www.facebook.com/rrsportsmassage.co.uk" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faFacebook} size="2x" className="icon"/>
                     </a>
                 </li>

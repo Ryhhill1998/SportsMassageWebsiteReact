@@ -20,6 +20,7 @@ import StoneTherapy from "./Routes/StoneTherapy/StoneTherapy";
 import PeerToPeer from "./Routes/PeerToPeer/PeerToPeer";
 import PamperDays from "./Routes/CorporatePamperDays/CorporatePamperDays";
 import Acupuncture from "./Routes/Acupuncture/Acupuncture";
+import FAQs from "./Routes/FAQs/FAQs";
 
 const router = createBrowserRouter([
     {
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
                 element: <StoneTherapy/>,
             },
             {
-                path: "/peer-to-peer-massage",
+                path: "/peer-to-peer",
                 element: <PeerToPeer/>,
             },
             {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
             {
                 path: "/acupuncture",
                 element: <Acupuncture/>,
+            },
+            {
+                path: "/faqs",
+                element: <FAQs/>,
             },
         ],
     },

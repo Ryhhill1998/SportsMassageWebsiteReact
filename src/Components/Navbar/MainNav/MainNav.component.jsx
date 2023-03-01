@@ -4,6 +4,42 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 import "./MainNav.styles.css";
+import NavigationLink from "../NavigationLink/NavigationLink.component";
+
+const navigationLinks = [
+    {
+        text: "Sports Massage",
+        route: "/sports-massage"
+    },
+    {
+        text: "Reflexology",
+        route: "/reflexology"
+    },
+    {
+        text: "Swedish Massage",
+        route: "/swedish-massage"
+    },
+    {
+        text: "Indian Head Massage",
+        route: "/indian-head-massage"
+    },
+    {
+        text: "LA Stone Therapy",
+        route: "/la-stone-therapy"
+    },
+    {
+        text: "Acupuncture",
+        route: "/acupuncture"
+    },
+    {
+        text: "Corporate Pamper Days",
+        route: "/corporate-pamper-days"
+    },
+    {
+        text: "Peer-to-Peer Massage",
+        route: "/peer-to-peer"
+    }
+]
 
 const MainNav = () => {
 
@@ -26,74 +62,13 @@ const MainNav = () => {
                     </a>
                     <div id="services-dropdown" className="no-display">
                         <ul>
-                            <li>
-                                <NavLink
-                                    to={`/sports-massage`}
-                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                                    onClick={hideServices}>
-                                    Sports Massage
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to={`/reflexology`}
-                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                                    onClick={hideServices}>
-                                    Reflexology
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to={`/swedish-massage`}
-                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                                    onClick={hideServices}>
-                                    Swedish Massage
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to={`/indian-head-massage`}
-                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                                    onClick={hideServices}>
-                                    Indian Head Massage
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to={`/la-stone-therapy`}
-                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                                    onClick={hideServices}>
-                                    LA Stone Therapy
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to={`/acupuncture`}
-                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                                    onClick={hideServices}>
-                                    Acupuncture
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to={`/corporate-pamper-days`}
-                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                                    onClick={hideServices}>
-                                    Corporate Pamper Days
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to={`/peer-to-peer-massage`}
-                                    className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                                    onClick={hideServices}>
-                                    Peer-to-Peer Massage
-                                </NavLink>
-                            </li>
+                            {navigationLinks.map(navLink => (
+                                <NavigationLink {...navLink} onClickHandler={hideServices} />
+                            ))}
                         </ul>
                     </div>
                 </li>
-                <li><Link to={""}>FAQs</Link></li>
+                <li><Link to={"/faqs"}>FAQs</Link></li>
                 <li><a href="#section--testimonials">Testimonials</a></li>
                 <li><Link to={""} className="contact-button">Contact</Link></li>
             </ul>

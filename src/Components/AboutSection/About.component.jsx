@@ -1,7 +1,5 @@
 import "./About.styles.css";
 
-import ReadMore from "../ReadMore/ReadMore.component";
-
 const AboutSection = ({heading, content, imageSrc}) => {
     return (
         <div className="about">
