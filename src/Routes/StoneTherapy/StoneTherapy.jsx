@@ -40,7 +40,7 @@ const benefits = [
     },
     {
         iconImageSrc: stress,
-        description: "Helps relieve stress and tension"
+        description: "Helps to relieve stress and tension"
     },
     {
         iconImageSrc: heart,
@@ -48,7 +48,7 @@ const benefits = [
     },
     {
         iconImageSrc: relax,
-        description: "Helps relax the body"
+        description: "Helps to relax the body and mind"
     }
 ];
 
