@@ -9,6 +9,7 @@ import stress from "../../Images/stress.png";
 import relax from "../../Images/relax.png";
 import energy from "../../Images/energy.png";
 import heart from "../../Images/heart.png";
+import {useEffect} from "react";
 
 const cardInfo = {
     heading: "LA Stone Therapy",
@@ -53,6 +54,11 @@ const benefits = [
 ];
 
 const StoneTherapy = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <main className="container">
             <section id="section--about">

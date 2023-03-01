@@ -8,6 +8,7 @@ import swedishMassageImageSrc from "../../Images/swedishMassage.jpeg";
 import musclePain from "../../Images/muscle-pain.png";
 import sleep from "../../Images/sleep.png";
 import heart from "../../Images/heart.png";
+import {useEffect} from "react";
 
 const cardInfo = {
     heading: "Swedish Massage",
@@ -48,6 +49,11 @@ const benefits = [
 ];
 
 const SwedishMassage = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <main className="container">
             <section id="section--about">

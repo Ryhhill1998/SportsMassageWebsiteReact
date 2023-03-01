@@ -2,7 +2,7 @@ import "./Card.styles.css";
 
 import ReadMore from "../ReadMore/ReadMore.component";
 
-const CardComponent = ({imageSrc, heading, content}) => {
+const CardComponent = ({imageSrc, heading, content, route}) => {
     return (
         <figure className="card">
             <div>
@@ -14,7 +14,7 @@ const CardComponent = ({imageSrc, heading, content}) => {
 
                 <p>{content}</p>
 
-                <ReadMore/>
+                <ReadMore route={route} />
             </figcaption>
         </figure>
     )

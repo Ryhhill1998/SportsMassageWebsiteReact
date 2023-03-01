@@ -8,6 +8,7 @@ import indianHeadMassageImageSrc from "../../Images/indianHeadMassage.jpeg";
 import energy from "../../Images/energy.png";
 import stress from "../../Images/stress.png";
 import heart from "../../Images/heart.png";
+import {useEffect} from "react";
 
 const cardInfo = {
     heading: "Indian Head Massage",
@@ -48,6 +49,11 @@ const benefits = [
 ];
 
 const IndianHeadMassage = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <main className="container">
             <section id="section--about">

@@ -1,10 +1,11 @@
 import "./ReadMore.styles.css";
+import {Link} from "react-router-dom";
 
-const ReadMore = () => {
+const ReadMore = ({route}) => {
     return (
-        <a href="" className="read-more">
+        <Link to={route} className="read-more">
             Read more
-        </a>
+        </Link>
     );
 }
 

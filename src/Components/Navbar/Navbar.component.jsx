@@ -25,6 +25,10 @@ const Navbar = () => {
         });
     }, []);
 
+    useEffect(() => {
+        console.log(window.location.href);
+    }, [window.location.href]);
+
     return (
         <header>
             <div className="container">

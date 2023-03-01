@@ -8,6 +8,7 @@ import reflexologyImageSrc from "../../Images/reflexology.jpeg";
 import immunity from "../../Images/immune-system.png";
 import stress from "../../Images/stress.png";
 import relax from "../../Images/relax.png";
+import {useEffect} from "react";
 
 const cardInfo = {
     heading: "Reflexology",
@@ -52,6 +53,11 @@ const benefits = [
 ];
 
 const Reflexology = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <main className="container">
             <section id="section--about">

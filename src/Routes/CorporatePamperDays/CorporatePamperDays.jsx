@@ -9,6 +9,7 @@ import energy from "../../Images/energy.png";
 import stress from "../../Images/stress.png";
 import relax from "../../Images/relax.png";
 import reward from "../../Images/reward.png";
+import {useEffect} from "react";
 
 
 const cardInfo = {
@@ -54,6 +55,11 @@ const benefits = [
 const extraInfo = "Typically includes up to 6 hours of treatments, made up of 12 x 30 min sessions.";
 
 const PamperDays = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <main className="container">
             <section id="section--about">

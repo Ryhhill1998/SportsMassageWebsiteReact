@@ -15,43 +15,50 @@ const cards = [
         heading: "Sports Massage",
         content: `Sports Massage combines advanced massage techniques, stretching exercises and aftercare advice for 
         an intensive treatment which is ideal for both adults and juniors who want to maintain and improve their 
-        athletic performance.`
+        athletic performance.`,
+        route: "/sports-massage"
     },
     {
         imageSrc: reflexologyImageSrc,
         heading: "Reflexology",
         content: `Reflexology is an alternative medicine suitable for all ages and involves application of pressure to 
-        the feet and hands with specific thumb, finger, and hand techniques.`
+        the feet and hands with specific thumb, finger, and hand techniques.`,
+        route: "/reflexology"
     },
     {
         imageSrc: swedishImageSrc,
         heading: "Swedish Massage",
         content: `A gentle, relaxing and rhythmical, full body massage which increases the oxygen flow in the blood and 
         releases toxins from the muscles. Reducing emotional and physical stress, it stimulates the skin and soothes 
-        the nervous system.`
+        the nervous system.`,
+        route: "/swedish-massage"
     },
     {
         imageSrc: indianHeadMassageImageSrc,
         heading: "Indian Head Massage",
         content: `Practised in India for over a thousand years and brought to the west in the 1970's, Indian Head 
-        Massage now includes the scalp, face, ears, neck, shoulders and upper arms.`
+        Massage now includes the scalp, face, ears, neck, shoulders and upper arms.`,
+        route: "/indian-head-massage"
     },
     {
         imageSrc: stoneTherapyImageSrc,
         heading: "LA Stone Therapy",
         content: `Polished and smooth, water- heated Basalt (lava rocks) stones are used to apply pressure and heat to 
-        the body. Stones coated in oil can also be used to deliver various massaging strokes.`
+        the body. Stones coated in oil can also be used to deliver various massaging strokes.`,
+        route: "/la-stone-therapy"
     },
     {
         imageSrc: pamperDaysImageSrc,
         heading: "Corporate Pamper Days",
         content: `Corporate Pamper Days are an excellent way to celebrate a milestone in your business or simply reward 
-        your team! We can come to your premises and provide a range of treatments for you and your staff.`
+        your team! We can come to your premises and provide a range of treatments for you and your staff.`,
+        route: "/corporate-pamper-days"
     },
     {
         imageSrc: massageImageSrc,
         heading: "Peer-to-Peer Massages",
-        content: `Our Peer-to-Peer Massage programme is aimed specifically at children aged 4-13 years.`
+        content: `Our Peer-to-Peer Massage programme is aimed specifically at children aged 4-13 years.`,
+        route: "/peer-to-peer"
     }
 ];
 
@@ -59,10 +66,8 @@ const ServicesSection = () => {
     return (
         <div className="cards-container">
             {cards.map((card, i) => {
-                const {imageSrc, heading, content} = card;
-
                 return (
-                    <CardComponent key={i} imageSrc={imageSrc} heading={heading} content={content}/>
+                    <CardComponent key={i} {...card}/>
                 )
             })}
         </div>

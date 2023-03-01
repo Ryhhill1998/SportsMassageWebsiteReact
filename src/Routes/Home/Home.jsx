@@ -6,6 +6,7 @@ import Carousel from "../../Components/Carousel/Carousel.component";
 import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.component";
 
 import massageImageSrc from "../../Images/massage.jpeg";
+import {useEffect} from "react";
 
 const aboutCardInfo = {
     heading: "About Us",
@@ -20,7 +21,12 @@ const aboutCardInfo = {
     imageSrc: massageImageSrc
 };
 
-const App = () => {
+const Home = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <main className="container">
             <h1 className="intro-heading">Welcome!</h1>
@@ -46,4 +52,4 @@ const App = () => {
     );
 }
 
-export default App;
+export default Home;
