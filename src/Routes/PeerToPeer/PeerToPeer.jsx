@@ -5,9 +5,10 @@ import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.co
 import BenefitsSection from "../../Components/BenefitsSection/BenefitsSection.component";
 
 import peerToPeerImageSrc from "../../Images/massage.jpeg";
-import immunity from "../../Images/immune-system.png";
-import stress from "../../Images/stress.png";
-import relax from "../../Images/relax.png";
+import social from "../../Images/social.png";
+import selfEsteem from "../../Images/self-esteem.png";
+import bullying from "../../Images/bullying.png";
+import decision from "../../Images/decision.png";
 
 const cardInfo = {
     heading: "Peer-to-Peer Massage",
@@ -20,32 +21,36 @@ const cardInfo = {
     imageSrc: peerToPeerImageSrc
 };
 
-const conditions = [
-    "Hormonal imbalances",
-    "Menopause",
-    "Back pain",
-    "Migraines, headaches",
-    "Sleep disorders",
-    "Digestive problems",
-    "Circulatory problems",
-    "Stress-related disorders",
-    "Arthritis"
+const details = [
+    "There are two parts - each is 30 minutes",
+    "In part 1, the routine is performed on the class teacher",
+    "Students watch this in pairs and practise the routine on each other",
+    "Students swap roles with their partner and repeat the routine",
+    "In the next session, the second part of the routine is taught",
+    "Children receive a certificate of completion"
 ]
 
 const benefits = [
     {
-        iconImageSrc: immunity,
-        description: "Helps boost the immune system"
+        iconImageSrc: social,
+        description: "Helps to improve social skills"
     },
     {
-        iconImageSrc: stress,
-        description: "Helps relieve stress and tension"
+        iconImageSrc: selfEsteem,
+        description: "Helps to improve self-esteem"
     },
     {
-        iconImageSrc: relax,
-        description: "Helps relax and detoxify the body"
+        iconImageSrc: bullying,
+        description: "Helps to reduce bullying"
+    },
+    {
+        iconImageSrc: decision,
+        description: "Helps to improve decision making"
     }
 ];
+
+const extraInfo = `Children must ask for their partner's permission before the massage. No student has to 
+    participate.`;
 
 const PeerToPeer = () => {
     return (
@@ -57,7 +62,7 @@ const PeerToPeer = () => {
             <DottedSeparator/>
 
             <section id="section--benefits">
-                <BenefitsSection info={conditions} benefits={benefits}/>
+                <BenefitsSection infoTitle="Routine Details" info={details} extraInfo={extraInfo} benefits={benefits}/>
             </section>
 
             {/*<DottedSeparator/>*/}
