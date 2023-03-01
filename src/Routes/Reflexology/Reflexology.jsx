@@ -1,13 +1,13 @@
 import "./Reflexology.css";
 
-import reflexologyImageSrc from "../../Images/reflexology.jpeg";
 import About from "../../Components/AboutSection/About.component";
 import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.component";
-import ApplicableConditionsCard from "../../Components/ApplicableConditionsCard/ApplicableConditionsCard.component";
+import BenefitsSection from "../../Components/BenefitsCardsCollection/BenefitsSection.component";
+
+import reflexologyImageSrc from "../../Images/reflexology.jpeg";
 import immunity from "../../Images/immune-system.png";
 import stress from "../../Images/stress.png";
 import relax from "../../Images/relax.png";
-import BenefitsCardsCollection from "../../Components/BenefitsCardsCollection/BenefitsCardsCollection.component";
 
 const cardInfo = {
     heading: "Reflexology",
@@ -23,6 +23,18 @@ const cardInfo = {
     ],
     imageSrc: reflexologyImageSrc
 };
+
+const conditions = [
+    "Hormonal imbalances",
+    "Menopause",
+    "Back pain",
+    "Migraines, headaches",
+    "Sleep disorders",
+    "Digestive problems",
+    "Circulatory problems",
+    "Stress-related disorders",
+    "Arthritis"
+]
 
 const benefits = [
     {
@@ -49,15 +61,7 @@ const Reflexology = () => {
             <DottedSeparator/>
 
             <section id="section--benefits">
-                <div className="conditions-card-container">
-                    <ApplicableConditionsCard/>
-                </div>
-
-                <div className="benefits-container">
-                    <h2>BENEFITS</h2>
-
-                    <BenefitsCardsCollection benefits={benefits} />
-                </div>
+                <BenefitsSection conditions={conditions} benefits={benefits}/>
             </section>
 
             <DottedSeparator/>
