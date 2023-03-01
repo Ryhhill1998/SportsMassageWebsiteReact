@@ -5,9 +5,9 @@ import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.co
 import BenefitsSection from "../../Components/BenefitsSection/BenefitsSection.component";
 
 import swedishMassageImageSrc from "../../Images/swedishMassage.jpeg";
-import immunity from "../../Images/immune-system.png";
-import stress from "../../Images/stress.png";
-import relax from "../../Images/relax.png";
+import musclePain from "../../Images/muscle-pain.png";
+import sleep from "../../Images/sleep.png";
+import heart from "../../Images/heart.png";
 
 const cardInfo = {
     heading: "Swedish Massage",
@@ -22,29 +22,28 @@ const cardInfo = {
 };
 
 const conditions = [
-    "Hormonal imbalances",
-    "Menopause",
-    "Back pain",
-    "Migraines, headaches",
-    "Sleep disorders",
-    "Digestive problems",
-    "Circulatory problems",
-    "Stress-related disorders",
-    "Arthritis"
+    "Joint pain",
+    "Muscle tension",
+    "Osteoarthritis",
+    "Stress",
+    "Fibromyalgia",
+    "Headaches and migraines",
+    "Anxiety and depression",
+    "Sleep disorders"
 ]
 
 const benefits = [
     {
-        iconImageSrc: immunity,
-        description: "Helps boost the immune system"
+        iconImageSrc: musclePain,
+        description: "Helps to alleviate muscle pain"
     },
     {
-        iconImageSrc: stress,
-        description: "Helps relieve stress and tension"
+        iconImageSrc: sleep,
+        description: "Helps to improve sleep quality"
     },
     {
-        iconImageSrc: relax,
-        description: "Helps relax and detoxify the body"
+        iconImageSrc: heart,
+        description: "Helps to improve circulation"
     }
 ];
 
