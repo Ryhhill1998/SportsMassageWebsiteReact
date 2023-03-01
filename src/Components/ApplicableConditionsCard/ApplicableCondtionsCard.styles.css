@@ -4,6 +4,7 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0.5em 0.5em 1em rgba(128, 128, 128, 1);
+    margin: 0 auto;
 }
 
 .conditions-card h2 {

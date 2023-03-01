@@ -2,7 +2,7 @@ import "./Reflexology.css";
 
 import About from "../../Components/AboutSection/About.component";
 import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.component";
-import BenefitsSection from "../../Components/BenefitsCardsCollection/BenefitsSection.component";
+import BenefitsSection from "../../Components/BenefitsSection/BenefitsSection.component";
 
 import reflexologyImageSrc from "../../Images/reflexology.jpeg";
 import immunity from "../../Images/immune-system.png";
@@ -64,7 +64,7 @@ const Reflexology = () => {
                 <BenefitsSection conditions={conditions} benefits={benefits}/>
             </section>
 
-            <DottedSeparator/>
+            {/*<DottedSeparator/>*/}
         </main>
     );
 }

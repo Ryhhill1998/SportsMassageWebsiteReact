@@ -1,7 +1,13 @@
 import "./SportsMassage.css";
 
-import sportsMassageImageSrc from "../../Images/sportsMassage.jpeg";
 import About from "../../Components/AboutSection/About.component";
+import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.component";
+import BenefitsSection from "../../Components/BenefitsSection/BenefitsSection.component";
+
+import sportsMassageImageSrc from "../../Images/sportsMassage.jpeg";
+import immunity from "../../Images/immune-system.png";
+import stress from "../../Images/stress.png";
+import relax from "../../Images/relax.png";
 
 const cardInfo = {
     heading: "Sports Massage",
@@ -17,10 +23,47 @@ const cardInfo = {
     imageSrc: sportsMassageImageSrc
 };
 
+const conditions = [
+    "Hormonal imbalances",
+    "Menopause",
+    "Back pain",
+    "Migraines, headaches",
+    "Sleep disorders",
+    "Digestive problems",
+    "Circulatory problems",
+    "Stress-related disorders",
+    "Arthritis"
+]
+
+const benefits = [
+    {
+        iconImageSrc: immunity,
+        description: "Helps boost the immune system"
+    },
+    {
+        iconImageSrc: stress,
+        description: "Helps relieve stress and tension"
+    },
+    {
+        iconImageSrc: relax,
+        description: "Helps relax and detoxify the body"
+    }
+];
+
 const SportsMassage = () => {
     return (
         <main className="container">
-            <About {...cardInfo} />
+            <section id="section--about">
+                <About {...cardInfo} />
+            </section>
+
+            <DottedSeparator/>
+
+            <section id="section--benefits">
+                <BenefitsSection conditions={conditions} benefits={benefits}/>
+            </section>
+
+            {/*<DottedSeparator/>*/}
         </main>
     );
 }

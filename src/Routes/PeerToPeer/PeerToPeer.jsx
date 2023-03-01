@@ -1,7 +1,13 @@
 import "./PeerToPeer.css";
 
-import peerToPeerImageSrc from "../../Images/massage.jpeg";
 import About from "../../Components/AboutSection/About.component";
+import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.component";
+import BenefitsSection from "../../Components/BenefitsSection/BenefitsSection.component";
+
+import peerToPeerImageSrc from "../../Images/massage.jpeg";
+import immunity from "../../Images/immune-system.png";
+import stress from "../../Images/stress.png";
+import relax from "../../Images/relax.png";
 
 const cardInfo = {
     heading: "Peer-to-Peer Massage",
@@ -14,10 +20,47 @@ const cardInfo = {
     imageSrc: peerToPeerImageSrc
 };
 
+const conditions = [
+    "Hormonal imbalances",
+    "Menopause",
+    "Back pain",
+    "Migraines, headaches",
+    "Sleep disorders",
+    "Digestive problems",
+    "Circulatory problems",
+    "Stress-related disorders",
+    "Arthritis"
+]
+
+const benefits = [
+    {
+        iconImageSrc: immunity,
+        description: "Helps boost the immune system"
+    },
+    {
+        iconImageSrc: stress,
+        description: "Helps relieve stress and tension"
+    },
+    {
+        iconImageSrc: relax,
+        description: "Helps relax and detoxify the body"
+    }
+];
+
 const PeerToPeer = () => {
     return (
         <main className="container">
-            <About {...cardInfo} />
+            <section id="section--about">
+                <About {...cardInfo} />
+            </section>
+
+            <DottedSeparator/>
+
+            <section id="section--benefits">
+                <BenefitsSection conditions={conditions} benefits={benefits}/>
+            </section>
+
+            {/*<DottedSeparator/>*/}
         </main>
     );
 }
