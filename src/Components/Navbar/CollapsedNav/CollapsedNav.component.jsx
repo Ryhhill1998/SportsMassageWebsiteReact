@@ -2,7 +2,7 @@ import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import "./CollapsedNav.styles.css";
-import {Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {navigationLinks} from "../MainNav/MainNav.component";
 import NavigationLink from "../NavigationLink/NavigationLink.component";
 
@@ -32,9 +32,8 @@ const CollapsedNav = () => {
                         <NavigationLink key={i} {...navLink} onClickHandler={hideDropdown} />
                     ))}
 
-                    <li><Link to={"/"}>FAQs</Link></li>
-                    <li><Link to={"/"}>Testimonials</Link></li>
-                    <li><Link to={"/"} className="contact-button">Contact</Link></li>
+                    <li><Link to={"/faqs"} onClick={hideDropdown}>FAQs</Link></li>
+                    <li><Link to={"/"} onClick={hideDropdown} className="contact-button">Contact</Link></li>
                 </ul>
             </div>
         </>

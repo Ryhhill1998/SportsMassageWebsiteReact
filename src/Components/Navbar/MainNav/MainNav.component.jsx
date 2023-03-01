@@ -1,4 +1,4 @@
-import {Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
@@ -68,9 +68,9 @@ const MainNav = () => {
                         </ul>
                     </div>
                 </li>
-                <li><Link to={"/faqs"}>FAQs</Link></li>
-                <li><a href="#section--testimonials">Testimonials</a></li>
-                <li><Link to={""} className="contact-button">Contact</Link></li>
+                <li><Link to={"/faqs"} onClick={hideServices}>FAQs</Link></li>
+                <li><a href="#section--testimonials" onClick={hideServices}>Testimonials</a></li>
+                <li><Link to={""} onClick={hideServices} className="contact-button">Contact</Link></li>
             </ul>
         </nav>
     );

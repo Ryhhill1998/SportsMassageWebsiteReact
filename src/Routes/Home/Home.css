@@ -19,7 +19,7 @@ body {
 
 /* MAIN */
 main {
-    margin: 240px auto 5em;
+    margin: 220px auto 5em;
     padding: 3.5em 0 1em;
     min-height: 450px;
 }
@@ -170,6 +170,7 @@ h2 {
     font-family: 'Pacifico', cursive;
     text-align: center;
     font-size: 4rem;
+    padding-top: 0.25em;
 }
 
 /* --------------- GENERAL --------------- */
@@ -219,6 +220,6 @@ img {
 /* --------------- MEDIA QUERIES --------------- */
 @media (max-width: 750px) {
     main {
-        margin-top: 290px;
+        margin-top: 270px;
     }
 }
