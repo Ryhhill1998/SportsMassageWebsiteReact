@@ -4,10 +4,10 @@ import reflexologyImageSrc from "../../Images/reflexology.jpeg";
 import About from "../../Components/AboutSection/About.component";
 import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.component";
 import ApplicableConditionsCard from "../../Components/ApplicableConditionsCard/ApplicableConditionsCard.component";
-import BenefitCard from "../../Components/BenefitCard/BenefitCard.component";
 import immunity from "../../Images/immune-system.png";
 import stress from "../../Images/stress.png";
 import relax from "../../Images/relax.png";
+import BenefitsCardsCollection from "../../Components/BenefitsCardsCollection/BenefitsCardsCollection.component";
 
 const cardInfo = {
     heading: "Reflexology",
@@ -55,13 +55,12 @@ const Reflexology = () => {
 
                 <div className="benefits-container">
                     <h2>BENEFITS</h2>
-                    <div className="benefits-card-container">
-                        {benefits.map((benefit, i) => {
-                            return <BenefitCard key={i} {...benefit}/>
-                        })}
-                    </div>
+
+                    <BenefitsCardsCollection benefits={benefits} />
                 </div>
             </section>
+
+            <DottedSeparator/>
         </main>
     );
 }
