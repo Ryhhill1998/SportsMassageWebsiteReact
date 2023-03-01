@@ -30,3 +30,7 @@
     margin-right: 0.8em;
     font-size: 1.5rem;
 }
+
+.conditions-card p {
+    padding: 0 2em;
+}

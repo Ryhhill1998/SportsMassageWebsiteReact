@@ -57,7 +57,7 @@ const SwedishMassage = () => {
             <DottedSeparator/>
 
             <section id="section--benefits">
-                <BenefitsSection conditions={conditions} benefits={benefits}/>
+                <BenefitsSection infoTitle="Applicable Conditions" info={conditions} benefits={benefits}/>
             </section>
 
             {/*<DottedSeparator/>*/}

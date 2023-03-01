@@ -57,7 +57,7 @@ const PeerToPeer = () => {
             <DottedSeparator/>
 
             <section id="section--benefits">
-                <BenefitsSection conditions={conditions} benefits={benefits}/>
+                <BenefitsSection info={conditions} benefits={benefits}/>
             </section>
 
             {/*<DottedSeparator/>*/}

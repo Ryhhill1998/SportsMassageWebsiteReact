@@ -1,8 +1,8 @@
 import "./BenefitsSection.styles.css";
 import BenefitCard from "../BenefitCard/BenefitCard.component";
-import ApplicableConditionsCard from "../ApplicableConditionsCard/ApplicableConditionsCard.component";
+import AdditionalInfo from "../AdditionalInfo/AdditionalInfo.component";
 
-const BenefitsSection = ({conditions, benefits}) => {
+const BenefitsSection = ({infoTitle, info, extraInfo, benefits}) => {
     return (
         <div className="benefits-section-container">
             <div className="benefits-cards-container">
@@ -12,7 +12,7 @@ const BenefitsSection = ({conditions, benefits}) => {
             </div>
 
             <div className="conditions-card-container">
-                <ApplicableConditionsCard conditions={conditions}/>
+                <AdditionalInfo title={infoTitle} info={info} extraInfo={extraInfo}/>
             </div>
         </div>
     );

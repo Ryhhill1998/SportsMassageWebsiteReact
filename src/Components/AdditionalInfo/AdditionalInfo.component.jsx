@@ -1,24 +1,25 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleChevronRight} from '@fortawesome/free-solid-svg-icons';
 
-import "./ApplicableCondtionsCard.styles.css";
+import "./AdditionalInfo.styles.css";
 
-const ApplicableConditionsCard = ({conditions}) => {
+const AdditionalInfo = ({title, info, extraInfo}) => {
     return (
         <div className="conditions-card">
-            <h2>Applicable Conditions</h2>
+            <h2>{title}</h2>
             <ul className="bullet-list">
-                {conditions.map((condition, i) => {
+                {info.map((entry, i) => {
                     return (
                         <li key={i}>
                             <FontAwesomeIcon icon={faCircleChevronRight} size="2x" className="icon" />
-                            {condition}
+                            {entry}
                         </li>
                     );
                 })}
             </ul>
+            <p>{extraInfo}</p>
         </div>
     );
 }
 
-export default ApplicableConditionsCard;
+export default AdditionalInfo;
