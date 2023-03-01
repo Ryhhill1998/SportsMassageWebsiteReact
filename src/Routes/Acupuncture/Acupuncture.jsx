@@ -1,13 +1,14 @@
 import "./Acupuncture.css";
 
 import About from "../../Components/AboutSection/About.component";
-
-import acupunctureImageSrc from "../../Images/acupuncture.jpg";
-import immunity from "../../Images/immune-system.png";
-import stress from "../../Images/stress.png";
-import relax from "../../Images/relax.png";
 import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.component";
 import BenefitsSection from "../../Components/BenefitsSection/BenefitsSection.component";
+
+import acupunctureImageSrc from "../../Images/acupuncture.jpg";
+import pain from "../../Images/muscle-pain.png";
+import healing from "../../Images/healing.png";
+import stress from "../../Images/stress.png";
+import energy from "../../Images/energy.png";
 
 const cardInfo = {
     heading: "Acupuncture",
@@ -17,36 +18,38 @@ const cardInfo = {
         `It involves stimulating sensory nerves under the skin and in the muscles. This results in pain relieving 
         endorphins, natural substances being produced by the body. It is based on the belief that an energy, known as 
         Qi, flows through the channels in the body called meridians.`,
-        `Practitioners use acupuncture to treat a range of conditions including chronic pain, headaches, migraines, 
-        joint problems and dental pain.`
+        `An initial session usually lasts between 30 minutes to 1 hour and involves a consultation, which assesses 
+        your general health, medical history and a physical examination. `
     ],
     imageSrc: acupunctureImageSrc
 };
 
 const conditions = [
-    "Hormonal imbalances",
-    "Menopause",
-    "Back pain",
-    "Migraines, headaches",
-    "Sleep disorders",
-    "Digestive problems",
-    "Circulatory problems",
-    "Stress-related disorders",
-    "Arthritis"
+    "Chronic pain",
+    "Migraines and headaches",
+    "Joint problems",
+    "Dental pain",
+    "Post-operative pain",
+    "Neck and back pain",
+    "Stroke"
 ]
 
 const benefits = [
     {
-        iconImageSrc: immunity,
-        description: "Helps boost the immune system"
+        iconImageSrc: pain,
+        description: "Helps reduce pain and discomfort"
+    },
+    {
+        iconImageSrc: healing,
+        description: "Helps to promote healing"
     },
     {
         iconImageSrc: stress,
         description: "Helps relieve stress and tension"
     },
     {
-        iconImageSrc: relax,
-        description: "Helps relax and detoxify the body"
+        iconImageSrc: energy,
+        description: "Helps to increase energy levels"
     }
 ];
 

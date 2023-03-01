@@ -17,7 +17,7 @@ const AdditionalInfo = ({title, info, extraInfo}) => {
                     );
                 })}
             </ul>
-            <p>{extraInfo}</p>
+            {extraInfo && <p>{extraInfo}</p>}
         </div>
     );
 }
