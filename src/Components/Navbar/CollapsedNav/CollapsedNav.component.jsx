@@ -3,7 +3,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import "./CollapsedNav.styles.css";
 import {Link, NavLink} from "react-router-dom";
-import {useEffect} from "react";
+import {navigationLinks} from "../MainNav/MainNav.component";
+import NavigationLink from "../NavigationLink/NavigationLink.component";
 
 const CollapsedNav = () => {
 
@@ -26,71 +27,11 @@ const CollapsedNav = () => {
             </nav>
             <div id="dropdown-menu" className="collapsed-nav-dropdown no-display">
                 <ul>
-                    <li><Link to={"/"} onClick={hideDropdown}>Home</Link></li>
-                    <li>
-                        <NavLink
-                            to={"/sports-massage"}
-                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                            onClick={hideDropdown}>
-                            Sports Massage
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={"/reflexology"}
-                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                            onClick={hideDropdown}>
-                            Reflexology
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={"/swedish-massage"}
-                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                            onClick={hideDropdown}>
-                            Swedish Massage
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={"/indian-head-massage"}
-                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                            onClick={hideDropdown}>
-                            Indian Head Massage
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={"/la-stone-therapy"}
-                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                            onClick={hideDropdown}>
-                            LA Stone Therapy
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={"/acupuncture"}
-                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                            onClick={hideDropdown}>
-                            Acupuncture
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={"/corporate-pamper-days"}
-                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                            onClick={hideDropdown}>
-                            Corporate Pamper Days
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to={"/peer-to-peer-massage"}
-                            className={({ isActive }) => isActive ? "dropdown-selected" : ""}
-                            onClick={hideDropdown}>
-                            Peer-to-Peer Massage
-                        </NavLink>
-                    </li>
+                    <NavigationLink text="Home" route="/" onClickHandler={hideDropdown} />
+                    {navigationLinks.map((navLink, i) => (
+                        <NavigationLink key={i} {...navLink} onClickHandler={hideDropdown} />
+                    ))}
+
                     <li><Link to={"/"}>FAQs</Link></li>
                     <li><Link to={"/"}>Testimonials</Link></li>
                     <li><Link to={"/"} className="contact-button">Contact</Link></li>

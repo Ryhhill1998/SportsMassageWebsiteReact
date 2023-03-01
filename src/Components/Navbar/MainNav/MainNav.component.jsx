@@ -6,7 +6,7 @@ import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
 import "./MainNav.styles.css";
 import NavigationLink from "../NavigationLink/NavigationLink.component";
 
-const navigationLinks = [
+export const navigationLinks = [
     {
         text: "Sports Massage",
         route: "/sports-massage"
@@ -62,8 +62,8 @@ const MainNav = () => {
                     </a>
                     <div id="services-dropdown" className="no-display">
                         <ul>
-                            {navigationLinks.map(navLink => (
-                                <NavigationLink {...navLink} onClickHandler={hideServices} />
+                            {navigationLinks.map((navLink, i) => (
+                                <NavigationLink key={i} {...navLink} onClickHandler={hideServices} />
                             ))}
                         </ul>
                     </div>
