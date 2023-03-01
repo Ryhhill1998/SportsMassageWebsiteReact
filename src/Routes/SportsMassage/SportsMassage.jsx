@@ -1,4 +1,4 @@
-import "./sportsMassage.css";
+import "./SportsMassage.css";
 
 import sportsMassageImageSrc from "../../Images/sportsMassage.jpeg";
 import About from "../../Components/AboutSection/About.component";

@@ -1,4 +1,4 @@
-import "./peerToPeer.css";
+import "./PeerToPeer.css";
 
 import peerToPeerImageSrc from "../../Images/massage.jpeg";
 import About from "../../Components/AboutSection/About.component";

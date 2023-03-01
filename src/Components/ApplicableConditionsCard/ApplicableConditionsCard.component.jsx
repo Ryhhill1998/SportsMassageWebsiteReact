@@ -1,7 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleChevronRight} from '@fortawesome/free-solid-svg-icons';
 
-import "./applicableCondtionsCard.styles.css";
+import "./ApplicableCondtionsCard.styles.css";
 
 const ApplicableConditionsCard = () => {
     return (

@@ -1,4 +1,4 @@
-import "./acupuncture.css";
+import "./Acupuncture.css";
 
 import acupunctureImageSrc from "../../Images/acupuncture.jpg";
 import About from "../../Components/AboutSection/About.component";

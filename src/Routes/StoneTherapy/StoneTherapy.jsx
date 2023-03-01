@@ -1,4 +1,4 @@
-import "./stoneTherapy.css";
+import "./StoneTherapy.css";
 
 import stoneTherapyImageSrc from "../../Images/stoneTherapy.jpeg";
 import About from "../../Components/AboutSection/About.component";

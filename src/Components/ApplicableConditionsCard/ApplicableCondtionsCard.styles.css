@@ -1,22 +1,20 @@
 .conditions-card {
     background-color: #d7f0f8;
     max-width: 400px;
-    /*margin: 0 auto;*/
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0.5em 0.5em 1em rgba(128, 128, 128, 1);
 }
 
 .conditions-card h2 {
-    background-color: #5fc3e5;
-    color: white;
+    color: #06b0dd;
     margin: 0;
-    padding: 0.75em 0;
+    padding-top: 0.75em;
 }
 
 .conditions-card ul {
     margin: 0 auto;
-    padding: 1em;
+    padding: 1em 0;
 }
 
 .conditions-card li {
@@ -27,7 +25,7 @@
 }
 
 .conditions-card li .icon {
-    color: #5fc3e5;
+    color: #06b0dd;
     margin-right: 0.8em;
     font-size: 1.5rem;
 }

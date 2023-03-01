@@ -9,17 +9,17 @@ import {
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import BasicLayout from "./Routes/BasicLayout/basicLayout";
-import Home from "./Routes/Home/home.jsx";
-import ErrorPage from "./Routes/ErrorPage/errorPage";
-import SportsMassage from "./Routes/SportsMassage/sportsMassage";
-import SwedishMassage from "./Routes/SwedishMassage/swedishMassage";
-import Reflexology from "./Routes/Reflexology/reflexology";
-import IndianHeadMassage from "./Routes/IndianHeadMassage/indianHeadMassage";
-import StoneTherapy from "./Routes/StoneTherapy/stoneTherapy";
-import PeerToPeer from "./Routes/PeerToPeer/peerToPeer";
-import PamperDays from "./Routes/CorporatePamperDays/corporatePamperDays";
-import Acupuncture from "./Routes/Acupuncture/acupuncture";
+import BasicLayout from "./Routes/BasicLayout/BasicLayout";
+import Home from "./Routes/Home/Home.jsx";
+import ErrorPage from "./Routes/ErrorPage/ErrorPage";
+import SportsMassage from "./Routes/SportsMassage/SportsMassage";
+import SwedishMassage from "./Routes/SwedishMassage/SwedishMassage";
+import Reflexology from "./Routes/Reflexology/Reflexology";
+import IndianHeadMassage from "./Routes/IndianHeadMassage/IndianHeadMassage";
+import StoneTherapy from "./Routes/StoneTherapy/StoneTherapy";
+import PeerToPeer from "./Routes/PeerToPeer/PeerToPeer";
+import PamperDays from "./Routes/CorporatePamperDays/CorporatePamperDays";
+import Acupuncture from "./Routes/Acupuncture/Acupuncture";
 
 const router = createBrowserRouter([
     {

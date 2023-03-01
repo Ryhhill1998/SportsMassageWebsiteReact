@@ -1,4 +1,4 @@
-import './home.css';
+import './Home.css';
 
 import About from "../../Components/AboutSection/About.component";
 import Services from "../../Components/ServicesSection/Services.component";

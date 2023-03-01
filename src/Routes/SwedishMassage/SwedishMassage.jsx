@@ -1,4 +1,4 @@
-import "./swedishMassage.css";
+import "./SwedishMassage.css";
 
 import swedishMassageImageSrc from "../../Images/swedishMassage.jpeg";
 import About from "../../Components/AboutSection/About.component";

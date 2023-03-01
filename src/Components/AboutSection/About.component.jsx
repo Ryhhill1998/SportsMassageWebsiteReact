@@ -11,8 +11,6 @@ const AboutSection = ({heading, content, imageSrc}) => {
                 <div className="description">
                     {content.map((entry, i) => <p key={`${heading}-${i}`}>{entry}</p>)}
                 </div>
-
-                <ReadMore/>
             </div>
 
             <div className="intro-image" style={{backgroundImage: `url(${imageSrc})`}}></div>

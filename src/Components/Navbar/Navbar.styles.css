@@ -6,7 +6,6 @@ header {
     top: 0;
     width: 100%;
     z-index: 10;
-    padding-top: 0.75em;
 }
 
 header.shrink .logo-container {
@@ -46,6 +45,10 @@ header .container {
 
 /* --------------- MEDIA QUERIES --------------- */
 @media (max-width: 750px) {
+    header {
+        padding-top: 0.75em;
+    }
+
     header .container {
         width: 100%;
         margin: 0;

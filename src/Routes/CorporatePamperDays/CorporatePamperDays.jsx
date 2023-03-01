@@ -1,4 +1,4 @@
-import "./corporatePamperDays.css";
+import "./CorporatePamperDays.css";
 
 import pamperDaysImageSrc from "../../Images/pamperDays.jpeg";
 import About from "../../Components/AboutSection/About.component";

@@ -1,4 +1,4 @@
-import "./indianHeadMassage.css";
+import "./IndianHeadMassage.css";
 
 import indianHeadMassageImageSrc from "../../Images/indianHeadMassage.jpeg";
 import About from "../../Components/AboutSection/About.component";
