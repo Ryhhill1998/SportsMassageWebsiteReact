@@ -15,7 +15,6 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            console.log(window.scrollY)
             setTimeout(() => {
                 if (!navIsShrunk && window.scrollY > 200) {
                     setNavIsShrunk(true);
