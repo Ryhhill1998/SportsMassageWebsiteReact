@@ -1,10 +1,10 @@
 import "./SearchResult.styles.css";
 import {Link} from "react-router-dom";
 
-const SearchResult = ({title, route}) => {
+const SearchResult = ({title, route, onClickHandler}) => {
     return (
         <li>
-            <Link to={route} className="result search-result">
+            <Link to={route} onClick={onClickHandler} className="result search-result">
                 {title}
             </Link>
         </li>

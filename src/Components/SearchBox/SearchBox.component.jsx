@@ -21,37 +21,55 @@ const searchResultRoutes = {
 
 const SearchBox = () => {
     const [searchResults, setSearchResults] = useState([]);
+    const [searchQuery, setSearchQuery] = useState("");
+
+    const updateSearchQuery = ({target}) => setSearchQuery(target.value);
 
     const processSearch = () => {
-        const search = document.getElementById("search-field").value;
-        if (!search) {
+        if (!searchQuery) {
             console.log("no results");
             return;
         }
-        const possibleSearches = Object.keys(searchResultRoutes);
-        const results = possibleSearches.filter(result => result.includes(search));
 
-        const newSearchResults = results.map(result => {
-            return {
+        const possibleSearches = Object.keys(searchResultRoutes);
+
+        const results = possibleSearches
+            .filter(result => result.includes(searchQuery))
+            .map(result => ({
                 title: result,
                 route: searchResultRoutes[result]
-            }
-        });
+            }));
 
-        setSearchResults(newSearchResults);
+        setSearchResults(results);
+    }
+
+    const clearSearchResults = () => setSearchResults([]);
+
+    const clearSearchField = () => setSearchQuery("");
+
+    const resultClickedHandler = () => {
+        clearSearchField();
+        clearSearchResults();
     }
 
     return (
         <li className="search-container">
             <div className="search-box">
-                <input id="search-field" type="search" placeholder="Search..."/>
+                <input
+                    id="search-field"
+                    type="search" placeholder="Search..."
+                    onClick={clearSearchResults}
+                    onChange={updateSearchQuery}
+                    value={searchQuery}
+                    autoComplete="off"
+                />
                 <button id="search-button" onClick={processSearch}>
                     <FontAwesomeIcon icon={faMagnifyingGlass} className="icon" />
                 </button>
             </div>
             <ul id="search-results-container" className="search-results-dropdown">
                 {searchResults.map((result, i) => (
-                    <SearchResult key={i} {...result} />
+                    <SearchResult key={i} {...result} onClickHandler={resultClickedHandler} />
                 ))}
             </ul>
         </li>
