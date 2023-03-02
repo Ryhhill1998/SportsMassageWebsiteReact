@@ -7,41 +7,42 @@ import Logo from "../../Components/Logo/Logo.component";
 import SearchBox from "../../Components/SearchBox/SearchBox.component";
 
 import "./Navbar.styles.css";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 const Navbar = () => {
 
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            const header = document.querySelector("header");
-            const h1 = document.querySelector("h1");
-            const yPosition = h1 ? 320 : 200;
+    const [navIsShrunk, setNavIsShrunk] = useState(false);
 
-            if (window.scrollY > yPosition) {
-                header.classList.add("shrink");
-            } else {
-                header.classList.remove("shrink");
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 200) {
+                setNavIsShrunk(true);
+            } else if (window.scrollY === 0) {
+                setNavIsShrunk(false);
             }
-        });
+        }
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
         <header>
             <div className="navbar-container">
 
-                <div className="logo-container">
+                {!navIsShrunk && <div className="logo-container">
                     <Logo/>
                     <ul className="contact-info">
                         <li>
-                            <FontAwesomeIcon icon={faPhone} className="icon" /> 07446 258 822
+                            <FontAwesomeIcon icon={faPhone} className="icon"/> 07446 258 822
                         </li>
                         <li>
-                            <FontAwesomeIcon icon={faEnvelope} className="icon" /> rrsportsmassage@outlook.com
+                            <FontAwesomeIcon icon={faEnvelope} className="icon"/> rrsportsmassage@outlook.com
                         </li>
 
                         <SearchBox/>
                     </ul>
-                </div>
+                </div>}
 
                 <div className="collapsible-nav">
                     <MainNav/>

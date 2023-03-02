@@ -1,7 +1,6 @@
 .collapsed-nav {
     display: none;
     padding-bottom: 0.75em;
-    overflow: scroll;
 }
 
 .collapsed-nav .dropdown-button {
@@ -24,6 +23,8 @@
 
 .collapsed-nav-dropdown ul {
     margin: 0;
+    max-height: 50vh;
+    overflow: scroll;
 }
 
 .collapsed-nav-dropdown li:first-child {

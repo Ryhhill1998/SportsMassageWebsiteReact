@@ -2,7 +2,7 @@
 header {
     background-color: #d7f0f8;
     border-bottom: solid 5px #5fc3e5;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 10;
@@ -23,7 +23,7 @@ header .navbar-container {
 }
 
 .logo-container {
-    margin-top: 1em;
+    padding-top: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
