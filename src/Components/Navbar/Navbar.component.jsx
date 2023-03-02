@@ -29,10 +29,10 @@ const Navbar = () => {
     }, [navIsShrunk]);
 
     return (
-        <header className={navIsShrunk ? "shrink" : ""}>
+        <header>
             <div className="navbar-container">
 
-                <div className="logo-container">
+                {!navIsShrunk && <div className={`logo-container`}>
                     <Logo/>
                     <ul className="contact-info">
                         <li>
@@ -44,7 +44,7 @@ const Navbar = () => {
 
                         <SearchBox/>
                     </ul>
-                </div>
+                </div>}
 
                 <div className="collapsible-nav">
                     <MainNav/>
