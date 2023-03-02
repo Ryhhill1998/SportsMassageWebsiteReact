@@ -21,7 +21,7 @@ const Navbar = () => {
                 } else if (navIsShrunk && window.scrollY < 25) {
                     setNavIsShrunk(false);
                 }
-            }, 500);
+            }, 200);
         }
 
         window.addEventListener("scroll", handleScroll);
