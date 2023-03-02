@@ -18,8 +18,6 @@ const Navbar = () => {
             setTimeout(() => {
                 if (!navIsShrunk && window.scrollY > 200) {
                     setNavIsShrunk(true);
-                } else if (navIsShrunk && window.scrollY === 0) {
-                    setNavIsShrunk(false);
                 }
             }, 200);
         }
