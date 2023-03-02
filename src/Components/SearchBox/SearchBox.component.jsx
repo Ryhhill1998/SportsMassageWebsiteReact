@@ -30,12 +30,11 @@ const SearchBox = () => {
         }
         const possibleSearches = Object.keys(searchResultRoutes);
         const results = possibleSearches.filter(result => result.includes(search));
-        console.log(results);
 
         const newSearchResults = results.map(result => {
             return {
                 title: result,
-                route: possibleSearches[result]
+                route: searchResultRoutes[result]
             }
         });
 

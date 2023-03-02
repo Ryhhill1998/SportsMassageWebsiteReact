@@ -1,11 +1,12 @@
 import "./SearchResult.styles.css";
+import {Link} from "react-router-dom";
 
 const SearchResult = ({title, route}) => {
     return (
         <li>
-            <a className="result search-result" href={route}>
+            <Link to={route} className="result search-result">
                 {title}
-            </a>
+            </Link>
         </li>
     );
 }
