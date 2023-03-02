@@ -65,8 +65,8 @@ const FAQs = () => {
     return (
         <main className="container">
             <div className="faqs-container">
-                {questions.map(question => (
-                    <Question {...question} />
+                {questions.map((question, i) => (
+                    <Question key={i} {...question} />
                 ))}
             </div>
         </main>

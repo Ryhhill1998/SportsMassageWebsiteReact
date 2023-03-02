@@ -1,24 +1,28 @@
 .question-container {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
 
 .question {
     background-color: #d7f0f8;
     padding: 0.75em 1em;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
     border-radius: 8px;
     text-transform: capitalize;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.question:hover, .question:hover .icon {
+    color: #0189ab;
+    cursor: pointer;
 }
 
 .answer {
     background-color: #f6f5f5;
-    padding: 2em;
+    padding: 1em;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    text-align: center;
-}
-
-.dropdown-arrow {
-    cursor: pointer;
+    /*text-align: center;*/
 }
