@@ -32,6 +32,32 @@ const questions = [
         Most people don’t even feel the insertion and those who do, describe it as a kind of pressure. There is no 
         need to be afraid of the needles. If you are worried, however, mention this when you make your appointment, or 
         at your first appointment so your practitioner can take it into account and make things easier for you.`
+    },
+    {
+        questionText: "How many treatments do I need?",
+        answerText: `It is impossible to say how many treatments somebody will need, especially without a proper 
+        consultation and diagnostic process. What can be said is that generally, more recent complaints are easier to 
+        treat than chronic, long-standing illnesses.`
+    },
+    {
+        questionText: "How often do I need to have a treatment?",
+        answerText: `Usually treatments are scheduled weekly, sometimes bi-weekly. Many patients choose to, once the 
+        problem has been successfully treated, to attend treatment bi-weekly or monthly in order to ensure they stay 
+        healthy.`
+    },
+    {
+        questionText: "What happens on my first visit?",
+        answerText: `Your first visit includes a diagnostic consultation and your first treatment will be included. 
+        Your practitioner will find out medically relevant information about your condition. A brief physical 
+        examination will be conducted where necessary. If you are seeking treatment to a physical injury or ailment, 
+        please wear something that will allow the problem area to be examined easily. If you take any medication 
+        including vitamins and supplements, bring a list of these to your first appointment.
+`
+    },
+    {
+        questionText: "How long before I can exercise?",
+        answerText: `It is ok to the usual things you do afterwards. We do recommend that you avoid strenuous exercise 
+        for about 30 minutes after your treatment.`
     }
 ]
 
