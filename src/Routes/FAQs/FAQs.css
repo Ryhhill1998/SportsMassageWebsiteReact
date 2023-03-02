@@ -18,17 +18,3 @@
     border-bottom-right-radius: 8px;
     text-align: center;
 }
-
-/* --------------- MEDIA QUERIES --------------- */
-@media (min-width: 750px) {
-    .faqs-container {
-        display: flex;
-        justify-content: space-between;
-        gap: 3em;
-        flex-wrap: wrap;
-    }
-
-    .question-container {
-        width: 47.5%;
-    }
-}
