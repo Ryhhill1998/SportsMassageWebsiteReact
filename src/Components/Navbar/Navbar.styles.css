@@ -10,6 +10,12 @@ header {
 
 header.shrink .logo-container {
     display: none;
+    /*opacity: 0;*/
+    /*height: 0;*/
+}
+
+.logo-container {
+    transition: all 2s;
 }
 
 header .navbar-container {
