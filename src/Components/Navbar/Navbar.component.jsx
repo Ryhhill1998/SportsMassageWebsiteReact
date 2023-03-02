@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <header>
-            <div className="container">
+            <div className="navbar-container">
 
                 <div className="logo-container">
                     <Logo/>
