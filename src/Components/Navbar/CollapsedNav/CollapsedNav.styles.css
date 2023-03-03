@@ -10,9 +10,13 @@
     position: relative;
 }
 
-.collapsed-nav ul li:first-child {
+.open-search-button {
     position: absolute;
     left: 2em;
+}
+
+.open-search-button .icon {
+    font-size: 1.3rem;
 }
 
 .collapsed-nav .dropdown-button {
@@ -34,7 +38,7 @@
 
 .collapsed-nav-dropdown ul {
     margin: 0;
-    max-height: 50vh;
+    max-height: 65vh;
     overflow: scroll;
 }
 
