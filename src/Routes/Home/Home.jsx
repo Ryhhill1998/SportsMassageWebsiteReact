@@ -7,6 +7,7 @@ import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.co
 
 import massageImageSrc from "../../Images/massage.jpeg";
 import {useEffect} from "react";
+import Logo from "../../Components/Logo/Logo.component";
 
 const aboutCardInfo = {
     heading: "About Us",
@@ -29,6 +30,7 @@ const Home = () => {
 
     return (
         <main className="container">
+
             <h1 className="intro-heading">Welcome!</h1>
 
             <section id="section--about">

@@ -57,7 +57,7 @@ header .navbar-container {
     .logo-container {
         flex-direction: column;
         gap: 1em;
-        padding-top: 0;
+        padding: 0 0 1em;
     }
 
     .logo-container .logo {
@@ -65,6 +65,10 @@ header .navbar-container {
     }
 
     .contact-info > li:first-child, .contact-info > li:nth-child(2) {
+        display: none;
+    }
+
+    .contact-info {
         display: none;
     }
 }

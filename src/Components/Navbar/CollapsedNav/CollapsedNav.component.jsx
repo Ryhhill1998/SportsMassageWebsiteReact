@@ -1,4 +1,4 @@
-import {faCircleChevronDown, faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
+import {faCaretDown, faCircleChevronDown, faMagnifyingGlass, faPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import "./CollapsedNav.styles.css";
@@ -20,7 +20,7 @@ const CollapsedNav = () => {
         <>
             <nav className="collapsed-nav">
                 <ul>
-                    <li className="no-display"><FontAwesomeIcon icon={faMagnifyingGlass} className="icon" /></li>
+                    <li><FontAwesomeIcon icon={faMagnifyingGlass} className="icon" /></li>
                     <li className="dropdown-button" id="hamburger" onClick={toggleDropdown}>
                         Menu <FontAwesomeIcon icon={faCircleChevronDown} className="icon dropdown-arrow"/>
                     </li>
