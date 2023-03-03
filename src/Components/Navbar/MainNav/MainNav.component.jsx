@@ -5,6 +5,8 @@ import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 import "./MainNav.styles.css";
 import NavigationLink from "../NavigationLink/NavigationLink.component";
+import {ContactFormContext} from "../../../Contexts/ContactForm.context";
+import {useContext} from "react";
 
 export const navigationLinks = [
     {
@@ -43,12 +45,19 @@ export const navigationLinks = [
 
 const MainNav = () => {
 
+    const {setContactFormOpen} = useContext(ContactFormContext);
+
     const hideServices = () => {
         document.getElementById("services-dropdown").classList.add("no-display");
     }
 
     const toggleServices = () => {
         document.getElementById("services-dropdown").classList.toggle("no-display");
+    }
+
+    const handleContactClicked = () => {
+        hideServices();
+        setContactFormOpen(true);
     }
 
     return (
@@ -84,7 +93,7 @@ const MainNav = () => {
                     </NavLink>
                 </li>
                 <li><a href="#section--testimonials" onClick={hideServices}>Testimonials</a></li>
-                <li><Link to={""} onClick={hideServices} className="contact-button">Contact</Link></li>
+                <li><Link to={""} onClick={handleContactClicked} className="contact-button">Contact</Link></li>
             </ul>
         </nav>
     );

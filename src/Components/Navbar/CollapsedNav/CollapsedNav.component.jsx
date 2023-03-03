@@ -8,10 +8,12 @@ import NavigationLink from "../NavigationLink/NavigationLink.component";
 import {useContext, useState} from "react";
 import SearchBox from "../../SearchBox/SearchBox.component";
 import {DropdownSearchContext} from "../../../Contexts/DropdownSearch.context";
+import {ContactFormContext} from "../../../Contexts/ContactForm.context";
 
 const CollapsedNav = () => {
 
     const {dropdownSearch, setDropdownSearch} = useContext(DropdownSearchContext);
+    const {setContactFormOpen} = useContext(ContactFormContext);
 
     const toggleDropdown = () => {
         document.getElementById("dropdown-menu").classList.toggle("no-display");
@@ -23,6 +25,11 @@ const CollapsedNav = () => {
 
     const dropdownSearchBox = () => {
         setDropdownSearch(!dropdownSearch);
+    }
+
+    const handleContactClicked = () => {
+        hideDropdown();
+        setContactFormOpen(true);
     }
 
     return (
@@ -54,7 +61,7 @@ const CollapsedNav = () => {
                     ))}
 
                     <li><Link to={"/faqs"} onClick={hideDropdown}>FAQs</Link></li>
-                    <li><Link to={"/"} onClick={hideDropdown} className="contact-button">Contact</Link></li>
+                    <li><Link to={"/"} onClick={handleContactClicked} className="contact-button">Contact</Link></li>
                 </ul>
             </div>
         </>

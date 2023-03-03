@@ -28,10 +28,6 @@
     top: 3.2em;
 }
 
-.collapsible-nav .search-container {
-    /*position: absolute;*/
-}
-
 .collapsed-nav .dropdown-button {
     width: fit-content;
     padding: 0.5em;
@@ -51,7 +47,7 @@
 
 .collapsed-nav-dropdown ul {
     margin: 0;
-    max-height: 65vh;
+    max-height: 55vh;
     overflow: scroll;
 }
 

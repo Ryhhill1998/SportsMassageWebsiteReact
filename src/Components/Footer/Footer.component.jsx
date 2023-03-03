@@ -5,8 +5,17 @@ import Logo from "../Logo/Logo.component";
 import "./Footer.styles.css";
 import {Link, NavLink} from "react-router-dom";
 import useScrollToTop from "../../Hooks/useScrollToTop";
+import {ContactFormContext} from "../../Contexts/ContactForm.context";
+import {useContext} from "react";
 
 const Footer = () => {
+
+    const {setContactFormOpen} = useContext(ContactFormContext);
+
+    const handleContactClicked = () => {
+        setContactFormOpen(true);
+    }
+
     return (
         <footer>
             <Logo/>
@@ -28,7 +37,7 @@ const Footer = () => {
                         {({ isActive }) => isActive ? "Page top" : "Home"}
                     </NavLink>
                 </li>
-                <li><a className="contact-button">Contact</a></li>
+                <li><Link to={""} className="contact-button" onClick={handleContactClicked}>Contact</Link></li>
                 <li><Link to={"/"}>Cookies</Link></li>
                 <li><Link to={"/"}>Privacy</Link></li>
             </ul>
