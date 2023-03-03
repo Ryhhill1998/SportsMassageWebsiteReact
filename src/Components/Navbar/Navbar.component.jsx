@@ -8,6 +8,7 @@ import SearchBox from "../../Components/SearchBox/SearchBox.component";
 
 import "./Navbar.styles.css";
 import {useEffect, useState} from "react";
+import {DropdownSearchProvider} from "../../Contexts/DropdownSearch.context";
 
 const Navbar = () => {
 

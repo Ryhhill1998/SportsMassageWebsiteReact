@@ -5,12 +5,13 @@ import "./CollapsedNav.styles.css";
 import {Link} from "react-router-dom";
 import {navigationLinks} from "../MainNav/MainNav.component";
 import NavigationLink from "../NavigationLink/NavigationLink.component";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import SearchBox from "../../SearchBox/SearchBox.component";
+import {DropdownSearchContext} from "../../../Contexts/DropdownSearch.context";
 
 const CollapsedNav = () => {
 
-    const [dropdownSearch, setDropdownSearch] = useState(false);
+    const {dropdownSearch, setDropdownSearch} = useContext(DropdownSearchContext);
 
     const toggleDropdown = () => {
         document.getElementById("dropdown-menu").classList.toggle("no-display");

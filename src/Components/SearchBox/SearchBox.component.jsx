@@ -1,8 +1,9 @@
 import "./SearchBox.styles.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import SearchResult from "./SearchResult/SearchResult.component";
+import {DropdownSearchContext} from "../../Contexts/DropdownSearch.context";
 
 const searchResultRoutes = {
     "home": "/",
@@ -20,6 +21,8 @@ const searchResultRoutes = {
 }
 
 const SearchBox = () => {
+    const {dropdownSearch, setDropdownSearch} = useContext(DropdownSearchContext);
+
     const [searchResults, setSearchResults] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
 
@@ -50,7 +53,7 @@ const SearchBox = () => {
     const resultClickedHandler = () => {
         clearSearchField();
         clearSearchResults();
-        document.querySelector(".dropdown-search-container");
+        setDropdownSearch(false);
     }
 
     return (
