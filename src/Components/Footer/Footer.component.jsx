@@ -3,7 +3,14 @@ import {faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons";
 import Logo from "../Logo/Logo.component";
 
 import "./Footer.styles.css";
+import {Link, NavLink} from "react-router-dom";
 const Footer = () => {
+
+    const pageTopClickHandler = ({target}) => {
+        if (target.innerHTML === "Home") return;
+        window.scrollTo(0, 0);
+    }
+
     return (
         <footer>
             <Logo/>
@@ -20,10 +27,14 @@ const Footer = () => {
             </ul>
 
             <ul>
-                <li><a href="src/components">Home</a></li>
+                <li>
+                    <NavLink to={"/"} onClick={pageTopClickHandler}>
+                        {({ isActive }) => isActive ? "Page top" : "Home"}
+                    </NavLink>
+                </li>
                 <li><a className="contact-button">Contact</a></li>
-                <li><a href="src/components">Cookies</a></li>
-                <li><a href="src/components">Privacy</a></li>
+                <li><Link to={"/"}>Cookies</Link></li>
+                <li><Link to={"/"}>Privacy</Link></li>
             </ul>
             <p className="copyright">© Ryan Henzell-Hill</p>
         </footer>

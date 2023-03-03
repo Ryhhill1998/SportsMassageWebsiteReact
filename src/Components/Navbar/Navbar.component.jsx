@@ -20,7 +20,6 @@ const Navbar = () => {
             const yPosition = h1 ? 300 : 150;
 
             if (!navIsShrunk && window.scrollY > yPosition) {
-                console.log(window.scrollY)
                 setNavIsShrunk(true);
             } else if (navIsShrunk && window.scrollY === 0) {
                 setNavIsShrunk(false);
