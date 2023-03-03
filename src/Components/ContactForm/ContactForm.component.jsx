@@ -1,19 +1,14 @@
 import "./ContactForm.styles.css";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCircleXmark as regularClose} from "@fortawesome/free-regular-svg-icons";
-import {faCircleXmark as solidClose} from "@fortawesome/free-solid-svg-icons";
+import {faCircleXmark} from "@fortawesome/free-solid-svg-icons";
 
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import {ContactFormContext} from "../../Contexts/ContactForm.context";
 
 const ContactForm = () => {
 
-    const [closeHoveredOver, setCloseHoveredOver] = useState(false);
     const {contactFormOpen, setContactFormOpen} = useContext(ContactFormContext);
-
-    const handleMouseOverCloseButton = () => setCloseHoveredOver(true);
-    const handleMouseLeaveCloseButton = () => setCloseHoveredOver(false);
 
     const handleCloseClicked = () => setContactFormOpen(false);
 
@@ -24,13 +19,8 @@ const ContactForm = () => {
                     <form action="https://formsubmit.co/rrsportsmassage@outlook.com" method="POST">
                         <div>
                             <h3>Contact Us</h3>
-                            <div
-                                onMouseEnter={handleMouseOverCloseButton}
-                                onMouseLeave={handleMouseLeaveCloseButton}
-                                onClick={handleCloseClicked}
-                            >
-                                {!closeHoveredOver && <FontAwesomeIcon icon={regularClose} className="close-button icon"/>}
-                                {closeHoveredOver && <FontAwesomeIcon icon={solidClose} className="close-button icon"/>}
+                            <div onClick={handleCloseClicked}>
+                                <FontAwesomeIcon icon={faCircleXmark} className="close-button icon"/>
                             </div>
                         </div>
 

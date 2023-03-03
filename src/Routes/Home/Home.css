@@ -37,16 +37,6 @@ section {
     margin-top: 4em;
 }
 
-.overlay {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    background-color: rgba(0,0,0,0.6);
-    z-index: 20;
-    display: none;
-}
-
 /* FONT AWESOME ICONS */
 .icon {
     color: #06b0dd;

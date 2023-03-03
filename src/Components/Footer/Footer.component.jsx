@@ -3,8 +3,10 @@ import {faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons";
 import Logo from "../Logo/Logo.component";
 
 import "./Footer.styles.css";
+
 import {Link, NavLink} from "react-router-dom";
 import useScrollToTop from "../../Hooks/useScrollToTop";
+
 import {ContactFormContext} from "../../Contexts/ContactForm.context";
 import {useContext} from "react";
 

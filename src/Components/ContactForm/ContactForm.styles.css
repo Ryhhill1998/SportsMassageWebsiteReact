@@ -45,6 +45,10 @@ form .close-button {
     cursor: pointer;
 }
 
+form .close-button:hover {
+    color: #0189ab;
+}
+
 label {
     display: flex;
     flex-direction: column;
@@ -76,8 +80,8 @@ form .submit-button {
     border-radius: 10px;
     border: none;
     padding: 0.5em;
-    color: #5fc3e5;
-    background-color: white;
+    color: white;
+    background-color: #06b0dd;
     font-size: 1rem;
     font-weight: bolder;
     text-transform: uppercase;
@@ -85,5 +89,5 @@ form .submit-button {
 
 form .submit-button:hover {
     color: white;
-    background-color: #5fc3e5;
+    background-color: #0189ab;
 }
