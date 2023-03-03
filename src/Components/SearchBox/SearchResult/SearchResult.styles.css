@@ -1,0 +1,35 @@
+/* SEARCH RESULTS */
+.search-container {
+    position: relative;
+}
+
+.search-results-dropdown {
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    text-align: left;
+    font-size: 0.8rem;
+    width: 90%;
+    min-width: 280px;
+    margin-left: 0.25em;
+}
+
+.result {
+    border: solid 1px lightgrey;
+    border-top: none;
+    display: inline-block;
+    width: 100%;
+    padding: 0.5em;
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.search-result.active:hover {
+    background-color: #61c9e5;
+    color: white;
+    cursor: pointer;
+}
+
+.search-results-dropdown li:first-child > .result {
+    border-top: solid 1px lightgrey;
+}

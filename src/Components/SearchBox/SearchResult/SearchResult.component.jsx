@@ -1,10 +1,15 @@
 import "./SearchResult.styles.css";
 import {Link} from "react-router-dom";
 
-const SearchResult = ({title, route, onClickHandler}) => {
+const SearchResult = ({title, route, active, onClickHandler}) => {
+    const handleClick = () => {
+        if (!active) return null;
+        onClickHandler();
+    }
+
     return (
         <li>
-            <Link to={route} onClick={onClickHandler} className="result search-result">
+            <Link to={route} onClick={handleClick} className={`result search-result ${active ? "active" : ""}`}>
                 {title}
             </Link>
         </li>

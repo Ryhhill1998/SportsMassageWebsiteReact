@@ -21,7 +21,7 @@ const searchResultRoutes = {
 }
 
 const SearchBox = () => {
-    const {dropdownSearch, setDropdownSearch} = useContext(DropdownSearchContext);
+    const {setDropdownSearch} = useContext(DropdownSearchContext);
 
     const [searchResults, setSearchResults] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
@@ -30,18 +30,23 @@ const SearchBox = () => {
 
     const processSearch = () => {
         if (!searchQuery) {
-            console.log("no results");
+            setSearchResults([{title: "No results found", active: false}]);
             return;
         }
 
         const possibleSearches = Object.keys(searchResultRoutes);
 
-        const results = possibleSearches
-            .filter(result => result.includes(searchQuery))
+        let results = possibleSearches
+            .filter(result => result.includes(searchQuery.toLowerCase()))
             .map(result => ({
                 title: result,
-                route: searchResultRoutes[result]
+                route: searchResultRoutes[result],
+                active: true
             }));
+
+        if (!results.length) {
+            results = [{title: "No results found", active: false}];
+        }
 
         setSearchResults(results);
     }
