@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
@@ -54,7 +54,14 @@ const MainNav = () => {
     return (
         <nav className="main-nav">
             <ul>
-                <li><Link to={`/`} onClick={hideServices}>Home</Link></li>
+                <li>
+                    <NavLink
+                        to={`/`}
+                        className={({isActive}) => isActive ? "active" : ""}
+                        onClick={hideServices}>
+                        Home
+                    </NavLink>
+                </li>
                 <li className="services">
                     <a className="dropdown-button" id="services-button" onClick={toggleServices}>
                         Services
@@ -68,7 +75,14 @@ const MainNav = () => {
                         </ul>
                     </div>
                 </li>
-                <li><Link to={"/faqs"} onClick={hideServices}>FAQs</Link></li>
+                <li>
+                    <NavLink
+                        to={`/faqs`}
+                        className={({isActive}) => isActive ? "active" : ""}
+                        onClick={hideServices}>
+                        FAQs
+                    </NavLink>
+                </li>
                 <li><a href="#section--testimonials" onClick={hideServices}>Testimonials</a></li>
                 <li><Link to={""} onClick={hideServices} className="contact-button">Contact</Link></li>
             </ul>

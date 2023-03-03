@@ -24,9 +24,13 @@
     width: 100%;
 }
 
-.main-nav > ul > li > a:hover {
+.main-nav .active {
+    color: #0189ab;
     text-decoration: underline;
     text-underline-offset: 0.5em;
+}
+
+.main-nav > ul > li > a:hover {
     color: #0189ab;
     cursor: pointer;
 }
