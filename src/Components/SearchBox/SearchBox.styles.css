@@ -17,6 +17,7 @@
     border-right: none;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    margin-right: 0;
 }
 
 .search-box button {

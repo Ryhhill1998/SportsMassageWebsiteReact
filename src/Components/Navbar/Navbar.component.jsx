@@ -12,14 +12,16 @@ import {useEffect, useState} from "react";
 const Navbar = () => {
 
     const [navIsShrunk, setNavIsShrunk] = useState(false);
+    const [navIsGrown, setNavIsGrown] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            setTimeout(() => {
-                if (!navIsShrunk && window.scrollY > 200) {
-                    setNavIsShrunk(true);
-                }
-            }, 200);
+            if (!navIsShrunk && window.scrollY > 200) {
+                setNavIsShrunk(true);
+                setNavIsGrown(false);
+            } else if (navIsShrunk && window.scrollY === 0) {
+                setNavIsGrown(true);
+            }
         }
 
         window.addEventListener("scroll", handleScroll);
@@ -27,10 +29,10 @@ const Navbar = () => {
     }, [navIsShrunk]);
 
     return (
-        <header>
+        <header className={`${navIsShrunk ? "shrink" : ""} ${navIsGrown ? "grow" : ""}`}>
             <div className="navbar-container">
 
-                {!navIsShrunk && <div className={`logo-container`}>
+                <div className={`logo-container`}>
                     <Logo/>
                     <ul className="contact-info">
                         <li>
@@ -42,7 +44,7 @@ const Navbar = () => {
 
                         <SearchBox/>
                     </ul>
-                </div>}
+                </div>
 
                 <div className="collapsible-nav">
                     <MainNav/>

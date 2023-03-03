@@ -8,8 +8,8 @@ header {
     z-index: 10;
 }
 
-.logo-container {
-    transition: all 2s;
+header.shrink .logo-container {
+    display: none;
 }
 
 header .navbar-container {
@@ -19,7 +19,7 @@ header .navbar-container {
 
 /* LOGO */
 .logo {
-    max-width: 350px;
+    max-width: 300px;
 }
 
 .logo-container {
@@ -57,9 +57,20 @@ header .navbar-container {
     .logo-container {
         flex-direction: column;
         gap: 1em;
+        padding-top: 0;
+    }
+
+    .logo-container .logo {
+        width: 75%;
     }
 
     .contact-info > li:first-child, .contact-info > li:nth-child(2) {
         display: none;
+    }
+}
+
+@media (min-width: 750px) {
+    header.grow .logo-container {
+        display: flex;
     }
 }

@@ -3,9 +3,20 @@
     padding-bottom: 0.75em;
 }
 
+.collapsed-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.collapsed-nav ul li:first-child {
+    position: absolute;
+    left: 2em;
+}
+
 .collapsed-nav .dropdown-button {
     width: fit-content;
-    margin: 0 auto;
     padding: 0.5em;
 }
 
