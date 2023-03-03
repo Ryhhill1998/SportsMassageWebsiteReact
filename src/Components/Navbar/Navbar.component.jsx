@@ -16,7 +16,11 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (!navIsShrunk && window.scrollY > 200) {
+            const h1 = document.querySelector("h1");
+            const yPosition = h1 ? 300 : 150;
+
+            if (!navIsShrunk && window.scrollY > yPosition) {
+                console.log(window.scrollY)
                 setNavIsShrunk(true);
             } else if (navIsShrunk && window.scrollY === 0) {
                 setNavIsShrunk(false);
