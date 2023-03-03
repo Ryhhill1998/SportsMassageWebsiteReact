@@ -13,15 +13,13 @@ import {DropdownSearchProvider} from "../../Contexts/DropdownSearch.context";
 const Navbar = () => {
 
     const [navIsShrunk, setNavIsShrunk] = useState(false);
-    const [navIsGrown, setNavIsGrown] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             if (!navIsShrunk && window.scrollY > 200) {
                 setNavIsShrunk(true);
-                setNavIsGrown(false);
             } else if (navIsShrunk && window.scrollY === 0) {
-                setNavIsGrown(true);
+                setNavIsShrunk(false);
             }
         }
 
@@ -30,7 +28,7 @@ const Navbar = () => {
     }, [navIsShrunk]);
 
     return (
-        <header className={`${navIsShrunk ? "shrink" : ""} ${navIsGrown ? "grow" : ""}`}>
+        <header className={`${navIsShrunk ? "shrink" : ""}`}>
             <div className="navbar-container">
 
                 <div className={`logo-container`}>

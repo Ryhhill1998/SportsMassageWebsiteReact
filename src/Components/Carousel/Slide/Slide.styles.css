@@ -2,17 +2,19 @@
     grid-column-start: 1;
     grid-row-start: 1;
     width: 75%;
-    margin: 5em auto 0;
+    margin: 4em auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #d7f0f8;
     border-radius: 8px;
-    padding: 2em;
+    padding: 2.5em 0;
     position: relative;
 }
 
 .slide p {
+    display: inline-block;
+    width: 85%;
     text-align: center;
     font-size: 1.2rem;
     line-height: 2em;
@@ -20,7 +22,7 @@
 }
 
 .quotation-mark {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #0189ab;
     font-family: 'Pacifico', cursive;
     margin: 0.25em;
@@ -50,8 +52,8 @@
 
     .slide {
         visibility: visible;
-        width: 100%;
         margin-bottom: 10em;
+        width: 100%;
     }
 
     .slide:last-child {

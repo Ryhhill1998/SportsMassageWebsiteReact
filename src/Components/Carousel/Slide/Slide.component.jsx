@@ -5,7 +5,7 @@ import "./Slide.styles.css";
 
 const Slide = ({iconImageSrc, review, author, i}) => {
     return (
-        <figure className={`slide ${i < 2 ? "hidden" : ""}`}>
+        <figure className={`slide ${i > 0 ? "hidden" : ""}`}>
             <img className="avatar" src={iconImageSrc} alt="avatar"/>
 
             <p>
