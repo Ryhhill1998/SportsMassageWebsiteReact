@@ -6,6 +6,7 @@ import icon2 from "../../Images/icon2.png";
 import icon3 from "../../Images/icon3.png";
 
 import "./Carousel.styles.css";
+import {useState} from "react";
 
 const slides = [
     {
@@ -28,18 +29,48 @@ const slides = [
 ];
 
 const Carousel = () => {
+
+    const [slideVisible, setSlideVisible] = useState(0);
+
+    const rightArrowClickHandler = () => {
+        setSlideVisible(slideVisible => {
+            if (slideVisible === 2) {
+                return 0;
+            } else {
+                return slideVisible + 1;
+            }
+        });
+    }
+
+    const leftArrowClickHandler = () => {
+        setSlideVisible(slideVisible => {
+            if (slideVisible === 0) {
+                return 2;
+            } else {
+                return slideVisible - 1;
+            }
+        });
+    }
+
     return (
         <div className="carousel">
-            <FontAwesomeIcon icon={faCircleChevronLeft} className="icon arrow arrow--left" />
+            <FontAwesomeIcon
+                icon={faCircleChevronLeft}
+                onClick={leftArrowClickHandler}
+                className="icon arrow arrow--left"
+            />
 
             <div>
-                {slides.map((slide, i) => {
-                    const {iconImageSrc, review, author} = slide;
-                    return <Slide key={i} iconImageSrc={iconImageSrc} review={review} author={author} i={i}/>
-                })}
+                {slides.map((slide, i) => (
+                    <Slide key={i} {...slide} i={i} slideVisible={slideVisible} />
+                ))}
             </div>
 
-            <FontAwesomeIcon icon={faCircleChevronRight} className="icon arrow arrow--right" />
+            <FontAwesomeIcon
+                icon={faCircleChevronRight}
+                onClick={rightArrowClickHandler}
+                className="icon arrow arrow--right"
+            />
         </div>
     );
 }
