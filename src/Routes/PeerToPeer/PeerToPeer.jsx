@@ -10,6 +10,7 @@ import selfEsteem from "../../Images/self-esteem.png";
 import bullying from "../../Images/bullying.png";
 import decision from "../../Images/decision.png";
 import {useEffect} from "react";
+import useScrollToTop from "../../Hooks/useScrollToTop";
 
 const cardInfo = {
     heading: "Peer-to-Peer Massage",
@@ -55,9 +56,7 @@ const extraInfo = `Children must ask for their partner's permission before the m
 
 const PeerToPeer = () => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    useEffect(() => useScrollToTop, []);
 
     return (
         <main className="container">

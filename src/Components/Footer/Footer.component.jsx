@@ -4,13 +4,9 @@ import Logo from "../Logo/Logo.component";
 
 import "./Footer.styles.css";
 import {Link, NavLink} from "react-router-dom";
+import useScrollToTop from "../../Hooks/useScrollToTop";
+
 const Footer = () => {
-
-    const pageTopClickHandler = ({target}) => {
-        if (target.innerHTML === "Home") return;
-        window.scrollTo(0, 0);
-    }
-
     return (
         <footer>
             <Logo/>
@@ -28,7 +24,7 @@ const Footer = () => {
 
             <ul>
                 <li>
-                    <NavLink to={"/"} onClick={pageTopClickHandler}>
+                    <NavLink to={"/"} onClick={useScrollToTop}>
                         {({ isActive }) => isActive ? "Page top" : "Home"}
                     </NavLink>
                 </li>

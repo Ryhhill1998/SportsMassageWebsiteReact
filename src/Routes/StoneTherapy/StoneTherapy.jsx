@@ -10,6 +10,7 @@ import relax from "../../Images/relax.png";
 import energy from "../../Images/energy.png";
 import heart from "../../Images/heart.png";
 import {useEffect} from "react";
+import useScrollToTop from "../../Hooks/useScrollToTop";
 
 const cardInfo = {
     heading: "LA Stone Therapy",
@@ -55,9 +56,7 @@ const benefits = [
 
 const StoneTherapy = () => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    useEffect(() => useScrollToTop, []);
 
     return (
         <main className="container">
@@ -68,7 +67,6 @@ const StoneTherapy = () => {
             <DottedSeparator/>
 
             <section id="section--benefits">
-                {/*<h2>Is this the treatment for you?</h2>*/}
                 <BenefitsSection infoTitle="Applicable Conditions" info={conditions} benefits={benefits}/>
             </section>
 

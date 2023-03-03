@@ -10,6 +10,7 @@ import stress from "../../Images/stress.png";
 import relax from "../../Images/relax.png";
 import reward from "../../Images/reward.png";
 import {useEffect} from "react";
+import useScrollToTop from "../../Hooks/useScrollToTop";
 
 
 const cardInfo = {
@@ -56,9 +57,7 @@ const extraInfo = "Typically includes up to 6 hours of treatments, made up of 12
 
 const PamperDays = () => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    useEffect(() => useScrollToTop, []);
 
     return (
         <main className="container">

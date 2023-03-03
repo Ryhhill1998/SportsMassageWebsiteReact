@@ -9,6 +9,7 @@ import energy from "../../Images/energy.png";
 import stress from "../../Images/stress.png";
 import heart from "../../Images/heart.png";
 import {useEffect} from "react";
+import useScrollToTop from "../../Hooks/useScrollToTop";
 
 const cardInfo = {
     heading: "Indian Head Massage",
@@ -50,9 +51,7 @@ const benefits = [
 
 const IndianHeadMassage = () => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    useEffect(() => useScrollToTop, []);
 
     return (
         <main className="container">

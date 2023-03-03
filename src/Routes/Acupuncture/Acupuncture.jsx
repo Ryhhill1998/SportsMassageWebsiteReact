@@ -11,6 +11,7 @@ import pain from "../../Images/muscle-pain.png";
 import healing from "../../Images/healing.png";
 import stress from "../../Images/stress.png";
 import energy from "../../Images/energy.png";
+import useScrollToTop from "../../Hooks/useScrollToTop";
 
 const cardInfo = {
     heading: "Acupuncture",
@@ -57,9 +58,7 @@ const benefits = [
 
 const Acupuncture = () => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    useEffect(() => useScrollToTop, []);
 
     return (
         <main className="container">

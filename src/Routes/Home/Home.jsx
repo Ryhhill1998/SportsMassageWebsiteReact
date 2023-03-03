@@ -8,6 +8,7 @@ import DottedSeparator from "../../Components/DottedSeparator/DottedSeparator.co
 import massageImageSrc from "../../Images/massage.jpeg";
 import {useEffect} from "react";
 import Logo from "../../Components/Logo/Logo.component";
+import useScrollToTop from "../../Hooks/useScrollToTop";
 
 const aboutCardInfo = {
     heading: "About Us",
@@ -24,9 +25,7 @@ const aboutCardInfo = {
 
 const Home = () => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    useEffect(() => useScrollToTop, []);
 
     return (
         <main className="container">

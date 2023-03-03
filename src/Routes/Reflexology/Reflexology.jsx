@@ -9,6 +9,7 @@ import immunity from "../../Images/immune-system.png";
 import stress from "../../Images/stress.png";
 import relax from "../../Images/relax.png";
 import {useEffect} from "react";
+import useScrollToTop from "../../Hooks/useScrollToTop";
 
 const cardInfo = {
     heading: "Reflexology",
@@ -54,9 +55,7 @@ const benefits = [
 
 const Reflexology = () => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    useEffect(() => useScrollToTop, []);
 
     return (
         <main className="container">

@@ -1,6 +1,7 @@
 import "./FAQs.css";
 
 import Question from "../../Components/Question/Question.component";
+import useScrollToTop from "../../Hooks/useScrollToTop";
 
 const questions = [
     {
@@ -62,6 +63,9 @@ const questions = [
 ]
 
 const FAQs = () => {
+
+    useEffect(() => useScrollToTop, []);
+
     return (
         <main className="container">
             <div className="faqs-container">

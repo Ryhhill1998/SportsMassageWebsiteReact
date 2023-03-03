@@ -9,6 +9,7 @@ import muscle from "../../Images/muscle.png";
 import stress from "../../Images/stress.png";
 import performance from "../../Images/performance.png";
 import {useEffect} from "react";
+import useScrollToTop from "../../Hooks/useScrollToTop";
 
 const cardInfo = {
     heading: "Sports Massage",
@@ -51,9 +52,7 @@ const benefits = [
 
 const SportsMassage = () => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    useEffect(() => useScrollToTop, []);
 
     return (
         <main className="container">
