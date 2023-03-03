@@ -4,6 +4,7 @@
 
 .question {
     background-color: #d7f0f8;
+    color: #06b0dd;
     padding: 0.75em 1em;
     font-size: 1rem;
     margin: 0;
@@ -24,4 +25,11 @@
     padding: 1em;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+/* --------------- MEDIA QUERIES --------------- */
+@media (max-width: 750px) {
+    .question {
+        font-size: 0.8rem;
+    }
 }

@@ -1,3 +1,10 @@
 .faqs-container {
     margin-top: 2em;
 }
+
+/* --------------- MEDIA QUERIES --------------- */
+@media (min-width: 750px) {
+    .faqs-heading {
+        display: none;
+    }
+}

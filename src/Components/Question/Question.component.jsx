@@ -10,10 +10,10 @@ const Question = ({questionText, answerText}) => {
 
     return (
         <div className="question-container">
-            <h2 className="question" onClick={toggleAnswer}>
+            <h3 className="question" onClick={toggleAnswer}>
                 {questionText}
                 <FontAwesomeIcon icon={faCircleChevronDown} className="icon dropdown-arrow"/>
-            </h2>
+            </h3>
             <p className="answer no-display">
                 {answerText}
             </p>

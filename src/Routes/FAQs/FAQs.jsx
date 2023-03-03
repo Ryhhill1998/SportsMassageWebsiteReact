@@ -2,6 +2,7 @@ import "./FAQs.css";
 
 import Question from "../../Components/Question/Question.component";
 import useScrollToTop from "../../Hooks/useScrollToTop";
+import {useEffect} from "react";
 
 const questions = [
     {
@@ -68,6 +69,8 @@ const FAQs = () => {
 
     return (
         <main className="container">
+            <h2 className="faqs-heading">FAQs</h2>
+
             <div className="faqs-container">
                 {questions.map((question, i) => (
                     <Question key={i} {...question} />
