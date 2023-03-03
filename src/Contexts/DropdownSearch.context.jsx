@@ -6,7 +6,7 @@ export const DropdownSearchContext = createContext({
 });
 
 export const DropdownSearchProvider = ({ children }) => {
-    const [dropdownSearch, setDropdownSearch] = useState(null);
+    const [dropdownSearch, setDropdownSearch] = useState(false);
     const value = { dropdownSearch, setDropdownSearch };
     return <DropdownSearchContext.Provider value={value}>{children}</DropdownSearchContext.Provider>;
 };
