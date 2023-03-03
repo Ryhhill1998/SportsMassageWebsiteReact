@@ -50,6 +50,7 @@ const SearchBox = () => {
     const resultClickedHandler = () => {
         clearSearchField();
         clearSearchResults();
+        document.querySelector(".dropdown-search-container");
     }
 
     return (

@@ -10,6 +10,7 @@
     position: relative;
 }
 
+/* OPEN SEARCH */
 .open-search-button {
     position: absolute;
     left: 2em;
@@ -17,6 +18,18 @@
 
 .open-search-button .icon {
     font-size: 1.3rem;
+}
+
+.dropdown-search-container {
+    position: absolute;
+    background-color: #d7f0f8;
+    padding: 2em;
+    width: 100%;
+    top: 3.2em;
+}
+
+.collapsible-nav .search-container {
+    /*position: absolute;*/
 }
 
 .collapsed-nav .dropdown-button {

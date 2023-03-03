@@ -21,14 +21,14 @@ const CollapsedNav = () => {
     }
 
     const dropdownSearchBox = () => {
-
+        setDropdownSearch(!dropdownSearch);
     }
 
     return (
         <>
             <nav className="collapsed-nav">
                 <ul>
-                    <li className="open-search-button">
+                    <li onClick={dropdownSearchBox} className="open-search-button">
                         <FontAwesomeIcon icon={faMagnifyingGlass} className="icon" />
                     </li>
                     <li className="dropdown-button" id="hamburger" onClick={toggleDropdown}>
@@ -36,7 +36,15 @@ const CollapsedNav = () => {
                     </li>
                 </ul>
             </nav>
-            {/*<SearchBox/>*/}
+
+            {dropdownSearch &&
+                <div className="dropdown-search-container">
+                    <ul>
+                        <SearchBox/>
+                    </ul>
+                </div>
+            }
+
             <div id="dropdown-menu" className="collapsed-nav-dropdown no-display">
                 <ul>
                     <NavigationLink text="Home" route="/" onClickHandler={hideDropdown} />
