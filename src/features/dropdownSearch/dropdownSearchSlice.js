@@ -1,14 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const dropdownSearchSlice = createSlice({
-    name: 'counter',
+    name: 'dropdownSearch',
     initialState: {
         visible: false
     },
     reducers: {
-        showDropdownSearch: state => {
-            state.visible = true;
-        },
         hideDropdownSearch: state => {
             state.visible = false;
         },
@@ -18,6 +15,6 @@ export const dropdownSearchSlice = createSlice({
     }
 });
 
-export const { showDropdownSearch, hideDropdownSearch, toggleDropdownSearch } = dropdownSearchSlice.actions;
+export const { hideDropdownSearch, toggleDropdownSearch } = dropdownSearchSlice.actions;
 
 export default dropdownSearchSlice.reducer;
