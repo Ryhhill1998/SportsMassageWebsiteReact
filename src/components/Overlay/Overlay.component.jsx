@@ -1,16 +1,18 @@
 import "./Overlay.styles.css";
-import {useContext} from "react";
-import {ContactFormContext} from "../../contexts/ContactForm.context";
+
+import {useSelector, useDispatch} from "react-redux";
+import {hideContactForm} from "../../features/contactForm/contactForm.js";
 
 const Overlay = () => {
 
-    const {contactFormOpen, setContactFormOpen} = useContext(ContactFormContext);
+    const isContactFormVisible = useSelector(state => state.contactForm.visible);
+    const dispatch = useDispatch();
 
-    const handleOverlayClicked = () => setContactFormOpen(false);
+    const handleOverlayClicked = () => dispatch(hideContactForm());
 
     return (
         <>
-            {contactFormOpen && <div onClick={handleOverlayClicked} className="overlay"></div>}
+            {isContactFormVisible && <div onClick={handleOverlayClicked} className="overlay"></div>}
         </>
     );
 }
