@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import store from './redux/store.js';
+import { Provider } from 'react-redux';
+
 import {
     createBrowserRouter,
     RouterProvider,
@@ -9,18 +12,18 @@ import {
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import BasicLayout from "./Routes/BasicLayout/BasicLayout";
-import Home from "./Routes/Home/Home.jsx";
-import ErrorPage from "./Routes/ErrorPage/ErrorPage";
-import SportsMassage from "./Routes/SportsMassage/SportsMassage";
-import SwedishMassage from "./Routes/SwedishMassage/SwedishMassage";
-import Reflexology from "./Routes/Reflexology/Reflexology";
-import IndianHeadMassage from "./Routes/IndianHeadMassage/IndianHeadMassage";
-import StoneTherapy from "./Routes/StoneTherapy/StoneTherapy";
-import PeerToPeer from "./Routes/PeerToPeer/PeerToPeer";
-import PamperDays from "./Routes/CorporatePamperDays/CorporatePamperDays";
-import Acupuncture from "./Routes/Acupuncture/Acupuncture";
-import FAQs from "./Routes/FAQs/FAQs";
+import BasicLayout from "./routes/BasicLayout/BasicLayout";
+import Home from "./routes/Home/Home.jsx";
+import ErrorPage from "./routes/ErrorPage/ErrorPage";
+import SportsMassage from "./routes/SportsMassage/SportsMassage";
+import SwedishMassage from "./routes/SwedishMassage/SwedishMassage";
+import Reflexology from "./routes/Reflexology/Reflexology";
+import IndianHeadMassage from "./routes/IndianHeadMassage/IndianHeadMassage";
+import StoneTherapy from "./routes/StoneTherapy/StoneTherapy";
+import PeerToPeer from "./routes/PeerToPeer/PeerToPeer";
+import PamperDays from "./routes/CorporatePamperDays/CorporatePamperDays";
+import Acupuncture from "./routes/Acupuncture/Acupuncture";
+import FAQs from "./routes/FAQs/FAQs";
 
 const router = createBrowserRouter([
     {
@@ -76,7 +79,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+      <Provider store={store}>
+          <RouterProvider router={router} />
+      </Provider>
   </React.StrictMode>
 );
 
