@@ -5,7 +5,6 @@ import Footer from "../../components/Footer/Footer.component";
 import ContactForm from "../../components/ContactForm/ContactForm.component";
 import Overlay from "../../components/Overlay/Overlay.component";
 
-import {DropdownSearchProvider} from "../../contexts/DropdownSearch.context";
 import {ContactFormProvider} from "../../contexts/ContactForm.context";
 
 const BasicLayout = () => {
@@ -17,9 +16,7 @@ const BasicLayout = () => {
 
                 <ContactForm/>
 
-                <DropdownSearchProvider>
-                    <Navbar/>
-                </DropdownSearchProvider>
+                <Navbar/>
 
                 <Outlet/>
 

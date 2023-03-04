@@ -1,9 +1,11 @@
 import "./SearchBox.styles.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
-import {useContext, useState} from "react";
+import {useState} from "react";
 import SearchResult from "./SearchResult/SearchResult.component";
-import {DropdownSearchContext} from "../../contexts/DropdownSearch.context";
+
+import { useDispatch } from 'react-redux';
+import { hideDropdownSearch } from "../../features/dropdownSearch/dropdownSearchSlice.js";
 
 const searchResultRoutes = {
     "home": "/",
@@ -21,7 +23,7 @@ const searchResultRoutes = {
 }
 
 const SearchBox = () => {
-    const {setDropdownSearch} = useContext(DropdownSearchContext);
+    const dispatch = useDispatch();
 
     const [searchResults, setSearchResults] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
@@ -58,7 +60,7 @@ const SearchBox = () => {
     const resultClickedHandler = () => {
         clearSearchField();
         clearSearchResults();
-        setDropdownSearch(false);
+        dispatch(hideDropdownSearch());
     }
 
     return (
