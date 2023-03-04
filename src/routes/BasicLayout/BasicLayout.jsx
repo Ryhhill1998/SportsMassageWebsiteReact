@@ -5,23 +5,19 @@ import Footer from "../../components/Footer/Footer.component";
 import ContactForm from "../../components/ContactForm/ContactForm.component";
 import Overlay from "../../components/Overlay/Overlay.component";
 
-import {ContactFormProvider} from "../../contexts/ContactForm.context";
-
 const BasicLayout = () => {
 
     return (
         <>
-            <ContactFormProvider>
-                <Overlay/>
+            <Overlay/>
 
-                <ContactForm/>
+            <ContactForm/>
 
-                <Navbar/>
+            <Navbar/>
 
-                <Outlet/>
+            <Outlet/>
 
-                <Footer/>
-            </ContactFormProvider>
+            <Footer/>
         </>
     );
 }

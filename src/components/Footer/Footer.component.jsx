@@ -7,16 +7,14 @@ import "./Footer.styles.css";
 import {Link, NavLink} from "react-router-dom";
 import useScrollToTop from "../../hooks/useScrollToTop";
 
-import {ContactFormContext} from "../../contexts/ContactForm.context";
-import {useContext} from "react";
+import {useDispatch} from "react-redux";
+import {showContactForm} from "../../features/contactForm/contactFormSlice.js";
 
 const Footer = () => {
 
-    const {setContactFormOpen} = useContext(ContactFormContext);
+    const dispatch = useDispatch();
 
-    const handleContactClicked = () => {
-        setContactFormOpen(true);
-    }
+    const handleContactClicked = () => dispatch(showContactForm());
 
     return (
         <footer>

@@ -5,8 +5,9 @@ import {faCircleChevronDown} from "@fortawesome/free-solid-svg-icons";
 
 import "./MainNav.styles.css";
 import NavigationLink from "../NavigationLink/NavigationLink.component";
-import {ContactFormContext} from "../../../contexts/ContactForm.context";
-import {useContext} from "react";
+
+import {useDispatch} from "react-redux";
+import {showContactForm} from "../../../features/contactForm/contactFormSlice.js";
 
 export const navigationLinks = [
     {
@@ -45,7 +46,7 @@ export const navigationLinks = [
 
 const MainNav = () => {
 
-    const {setContactFormOpen} = useContext(ContactFormContext);
+    const dispatch = useDispatch();
 
     const hideServices = () => {
         document.getElementById("services-dropdown").classList.add("no-display");
@@ -57,7 +58,7 @@ const MainNav = () => {
 
     const handleContactClicked = () => {
         hideServices();
-        setContactFormOpen(true);
+        dispatch(showContactForm());
     }
 
     return (

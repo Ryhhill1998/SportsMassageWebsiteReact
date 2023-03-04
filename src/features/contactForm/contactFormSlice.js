@@ -8,9 +8,11 @@ export const contactFormSlice = createSlice({
     reducers: {
         showContactForm: state => {
             state.visible = true;
+            document.body.classList.add("no-scroll");
         },
         hideContactForm: state => {
             state.visible = false;
+            document.body.classList.remove("no-scroll");
         }
     }
 });

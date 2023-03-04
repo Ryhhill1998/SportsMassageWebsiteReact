@@ -1,7 +1,7 @@
 import "./Overlay.styles.css";
 
 import {useSelector, useDispatch} from "react-redux";
-import {hideContactForm} from "../../features/contactForm/contactForm.js";
+import {hideContactForm} from "../../features/contactForm/contactFormSlice.js";
 
 const Overlay = () => {
 

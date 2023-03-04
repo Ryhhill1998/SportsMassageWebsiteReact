@@ -3,18 +3,19 @@ import "./ContactForm.styles.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleXmark} from "@fortawesome/free-solid-svg-icons";
 
-import {useContext} from "react";
-import {ContactFormContext} from "../../contexts/ContactForm.context";
+import {useSelector, useDispatch} from "react-redux";
+import {hideContactForm} from "../../features/contactForm/contactFormSlice.js";
 
 const ContactForm = () => {
 
-    const {contactFormOpen, setContactFormOpen} = useContext(ContactFormContext);
+    const isContactFormVisible = useSelector(state => state.contactForm.visible);
+    const dispatch = useDispatch();
 
-    const handleCloseClicked = () => setContactFormOpen(false);
+    const handleCloseClicked = () => dispatch(hideContactForm());
 
     return (
         <>
-            {contactFormOpen &&
+            {isContactFormVisible &&
                 <div className="contact-form">
                     <form action="https://formsubmit.co/rrsportsmassage@outlook.com" method="POST">
                         <div>

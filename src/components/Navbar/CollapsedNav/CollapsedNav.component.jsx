@@ -9,6 +9,7 @@ import SearchBox from "../../SearchBox/SearchBox.component";
 
 import { useSelector, useDispatch } from 'react-redux';
 import { hideDropdownSearch, toggleDropdownSearch } from "../../../features/dropdownSearch/dropdownSearchSlice.js";
+import {showContactForm} from "../../../features/contactForm/contactFormSlice";
 
 const CollapsedNav = () => {
 
@@ -30,6 +31,7 @@ const CollapsedNav = () => {
     const handleContactClicked = () => {
         hideDropdown();
         dispatch(hideDropdownSearch());
+        dispatch(showContactForm());
     }
 
     return (
